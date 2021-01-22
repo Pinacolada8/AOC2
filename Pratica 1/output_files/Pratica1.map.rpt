@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Pratica1
-Thu Jan 21 21:49:43 2021
+Fri Jan 22 13:26:49 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -46,7 +46,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 21 21:49:43 2021      ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 22 13:26:49 2021      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; Pratica1                                   ;
 ; Top-level Entity Name              ; Pratica1                                   ;
@@ -164,8 +164,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; ramlpm.v                         ; yes             ; User Wizard-Generated File   ; E:/School/AOC 2/Pratica 1/ramlpm.v                                   ;         ;
-; Pratica1.v                       ; yes             ; User Verilog HDL File        ; E:/School/AOC 2/Pratica 1/Pratica1.v                                 ;         ;
+; ramlpm.v                         ; yes             ; User Wizard-Generated File   ; E:/School/AOC2/Pratica 1/ramlpm.v                                    ;         ;
+; Pratica1.v                       ; yes             ; User Verilog HDL File        ; E:/School/AOC2/Pratica 1/Pratica1.v                                  ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; h:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; h:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; h:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -175,7 +175,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                       ; yes             ; Megafunction                 ; h:/altera/13.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; h:/altera/13.0/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; h:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_voq1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/School/AOC 2/Pratica 1/db/altsyncram_voq1.tdf                     ;         ;
+; db/altsyncram_voq1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/School/AOC2/Pratica 1/db/altsyncram_voq1.tdf                      ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
 
 
@@ -231,13 +231,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                      ;
-+--------+--------------+---------+--------------+--------------+-----------------------+------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance       ; IP Include File                    ;
-+--------+--------------+---------+--------------+--------------+-----------------------+------------------------------------+
-; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |Pratica1|ramlpm:ram1 ; E:/School/AOC 2/Pratica 1/ramlpm.v ;
-+--------+--------------+---------+--------------+--------------+-----------------------+------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                     ;
++--------+--------------+---------+--------------+--------------+-----------------------+-----------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance       ; IP Include File                   ;
++--------+--------------+---------+--------------+--------------+-----------------------+-----------------------------------+
+; Altera ; RAM: 2-PORT  ; 13.0    ; N/A          ; N/A          ; |Pratica1|ramlpm:ram1 ; E:/School/AOC2/Pratica 1/ramlpm.v ;
++--------+--------------+---------+--------------+--------------+-----------------------+-----------------------------------+
 
 
 +------------------------------------------------------+
@@ -360,13 +360,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Jan 21 21:49:40 2021
+    Info: Processing started: Fri Jan 22 13:26:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Pratica1 -c Pratica1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file ramlpm.v
     Info (12023): Found entity 1: ramlpm
 Info (12021): Found 1 design units, including 1 entities, in source file pratica1.v
     Info (12023): Found entity 1: Pratica1
+Info (12021): Found 1 design units, including 1 entities, in source file ramlpm_mif.v
+    Info (12023): Found entity 1: ramlpm_mif
 Info (12127): Elaborating entity "Pratica1" for the top level hierarchy
 Info (12128): Elaborating entity "ramlpm" for hierarchy "ramlpm:ram1"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ramlpm:ram1|altsyncram:altsyncram_component"
@@ -402,9 +404,9 @@ Info (21057): Implemented 36 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21064): Implemented 8 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4614 megabytes
-    Info: Processing ended: Thu Jan 21 21:49:43 2021
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4618 megabytes
+    Info: Processing ended: Fri Jan 22 13:26:49 2021
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:01
 
 

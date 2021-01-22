@@ -5,6 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+E:/School/AOC\ 2/Pratica1_Part2 {E:/School/AOC 2/Pratica1_Part2/Pratica1_Part2.v}
-vlog -vlog01compat -work work +incdir+E:/School/AOC\ 2/Pratica1_Part2 {E:/School/AOC 2/Pratica1_Part2/ramlpm.v}
+vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica1_Part2 {E:/School/AOC2/Pratica1_Part2/Pratica1_Part2.v}
+vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica1_Part2 {E:/School/AOC2/Pratica1_Part2/ramlpm.v}
 
