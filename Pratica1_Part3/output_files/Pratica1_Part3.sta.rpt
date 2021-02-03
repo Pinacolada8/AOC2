@@ -1,0 +1,1179 @@
+TimeQuest Timing Analyzer report for Pratica1_Part3
+Tue Feb 02 23:43:11 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Pratica1_Part3                                     ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 66.82 MHz ; 66.82 MHz       ; clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++-------+---------+---------------+
+; Clock ; Slack   ; End Point TNS ;
++-------+---------+---------------+
+; clock ; -13.966 ; -1207.926     ;
++-------+---------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -118.380              ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                       ;
++---------+------------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node        ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------+--------------+--------------+-------------+--------------+------------+------------+
+; -13.966 ; MemWays[2][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.933     ;
+; -13.848 ; MemWays[2][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.798     ;
+; -13.839 ; MemWays[0][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.806     ;
+; -13.797 ; MemWays[0][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.726     ;
+; -13.754 ; MemWays[2][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.044      ; 14.720     ;
+; -13.721 ; MemWays[0][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.671     ;
+; -13.679 ; MemWays[0][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.010     ; 14.591     ;
+; -13.664 ; MemWays[2][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.593     ;
+; -13.641 ; MemWays[0][1][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.608     ;
+; -13.635 ; MemWays[0][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.012      ; 14.569     ;
+; -13.627 ; MemWays[0][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.044      ; 14.593     ;
+; -13.600 ; MemWays[1][0][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.002      ; 14.524     ;
+; -13.585 ; MemWays[0][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.006      ; 14.513     ;
+; -13.546 ; MemWays[2][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.010     ; 14.458     ;
+; -13.544 ; MemWays[3][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.473     ;
+; -13.523 ; MemWays[0][1][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.473     ;
+; -13.517 ; MemWays[0][0][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.005     ; 14.434     ;
+; -13.513 ; MemWays[1][1][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.480     ;
+; -13.502 ; MemWays[2][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.012      ; 14.436     ;
+; -13.499 ; MemWays[0][0][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.018      ; 14.439     ;
+; -13.487 ; MemWays[3][1][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.433     ;
+; -13.482 ; MemWays[1][0][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 14.389     ;
+; -13.477 ; MemWays[3][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.423     ;
+; -13.469 ; MemWays[0][0][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.002      ; 14.393     ;
+; -13.452 ; MemWays[2][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.006      ; 14.380     ;
+; -13.429 ; MemWays[0][1][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.044      ; 14.395     ;
+; -13.426 ; MemWays[3][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.010     ; 14.338     ;
+; -13.423 ; MemWays[0][0][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.011      ; 14.356     ;
+; -13.410 ; MemWays[1][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.339     ;
+; -13.406 ; MemWays[0][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.373     ;
+; -13.399 ; MemWays[2][2][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.345     ;
+; -13.395 ; MemWays[1][1][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.345     ;
+; -13.388 ; MemWays[1][0][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.001      ; 14.311     ;
+; -13.384 ; MemWays[2][0][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.005     ; 14.301     ;
+; -13.381 ; MemWays[0][0][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.001      ; 14.304     ;
+; -13.379 ; MemWays[0][2][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.325     ;
+; -13.370 ; MemWays[1][0][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.018      ; 14.310     ;
+; -13.369 ; MemWays[3][1][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.298     ;
+; -13.368 ; MemWays[1][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 14.307     ;
+; -13.359 ; MemWays[3][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.288     ;
+; -13.354 ; MemWays[2][1][4] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.321     ;
+; -13.351 ; MemWays[0][0][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 14.258     ;
+; -13.332 ; MemWays[3][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.006      ; 14.260     ;
+; -13.301 ; MemWays[1][1][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.044      ; 14.267     ;
+; -13.292 ; MemWays[1][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.010     ; 14.204     ;
+; -13.290 ; MemWays[2][0][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.011      ; 14.223     ;
+; -13.288 ; MemWays[0][1][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.238     ;
+; -13.287 ; MemWays[0][0][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 14.226     ;
+; -13.281 ; MemWays[2][2][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.210     ;
+; -13.275 ; MemWays[3][1][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.023      ; 14.220     ;
+; -13.273 ; MemWays[2][1][4] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.039      ; 14.234     ;
+; -13.272 ; MemWays[1][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.239     ;
+; -13.269 ; MemWays[0][2][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.215     ;
+; -13.265 ; MemWays[3][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.023      ; 14.210     ;
+; -13.261 ; MemWays[0][2][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.190     ;
+; -13.257 ; MemWays[0][0][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.001      ; 14.180     ;
+; -13.252 ; MemWays[1][0][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.001      ; 14.175     ;
+; -13.250 ; MemWays[1][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 14.172     ;
+; -13.249 ; MemWays[1][2][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.195     ;
+; -13.234 ; MemWays[2][0][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 14.173     ;
+; -13.227 ; MemWays[0][1][4] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 14.194     ;
+; -13.198 ; MemWays[1][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.006      ; 14.126     ;
+; -13.194 ; MemWays[0][1][5] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.044      ; 14.160     ;
+; -13.187 ; MemWays[2][2][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.023      ; 14.132     ;
+; -13.185 ; MemWays[0][1][8] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.114     ;
+; -13.167 ; MemWays[0][2][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.023      ; 14.112     ;
+; -13.162 ; MemWays[2][1][4] ; read[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.112     ;
+; -13.158 ; MemWays[1][0][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 14.097     ;
+; -13.156 ; MemWays[1][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.016      ; 14.094     ;
+; -13.154 ; MemWays[1][1][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 14.104     ;
+; -13.151 ; MemWays[0][2][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.080     ;
+; -13.146 ; MemWays[3][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 14.085     ;
+; -13.146 ; MemWays[0][1][4] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.039      ; 14.107     ;
+; -13.131 ; MemWays[1][2][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 14.060     ;
+; -13.116 ; MemWays[2][0][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 14.038     ;
+; -13.114 ; MemWays[0][0][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 14.053     ;
+; -13.104 ; MemWays[0][1][8] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.001      ; 14.027     ;
+; -13.060 ; MemWays[0][2][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.024      ; 14.006     ;
+; -13.060 ; MemWays[1][1][5] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.044      ; 14.026     ;
+; -13.057 ; MemWays[0][2][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.023      ; 14.002     ;
+; -13.052 ; MemWays[2][1][8] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 13.981     ;
+; -13.037 ; MemWays[1][2][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.023      ; 13.982     ;
+; -13.035 ; MemWays[0][1][4] ; read[4]~reg0 ; clock        ; clock       ; 1.000        ; 0.028      ; 13.985     ;
+; -13.029 ; MemWays[0][1][3] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 13.996     ;
+; -13.028 ; MemWays[3][0][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 13.950     ;
+; -13.023 ; MemWays[2][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.046      ; 13.991     ;
+; -13.023 ; MemWays[0][0][3] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.012      ; 13.957     ;
+; -13.022 ; MemWays[2][0][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; 0.016      ; 13.960     ;
+; -13.001 ; MemWays[3][0][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 13.940     ;
+; -12.996 ; MemWays[0][0][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.000      ; 13.918     ;
+; -12.993 ; MemWays[0][1][8] ; read[4]~reg0 ; clock        ; clock       ; 1.000        ; -0.010     ; 13.905     ;
+; -12.988 ; MemWays[2][2][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.004      ; 13.914     ;
+; -12.988 ; MemWays[1][0][4] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; 0.002      ; 13.912     ;
+; -12.984 ; MemWays[1][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 13.923     ;
+; -12.980 ; MemWays[2][0][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 13.919     ;
+; -12.971 ; MemWays[2][1][8] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.001      ; 13.894     ;
+; -12.968 ; MemWays[2][1][4] ; read[5]~reg0 ; clock        ; clock       ; 1.000        ; 0.045      ; 13.935     ;
+; -12.966 ; MemWays[3][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; 0.017      ; 13.905     ;
+; -12.948 ; MemWays[0][1][3] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; 0.039      ; 13.909     ;
+; -12.942 ; MemWays[0][2][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; 0.007      ; 13.871     ;
++---------+------------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                          ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; MemWays[1][1][5] ; MemWays[1][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][0][5] ; MemWays[2][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][0][5] ; MemWays[0][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][0][5] ; MemWays[3][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[1][0][5] ; MemWays[1][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[1][2][4] ; MemWays[1][2][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][2][4] ; MemWays[0][2][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][2][4] ; MemWays[2][2][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][2][3] ; MemWays[3][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][2][3] ; MemWays[0][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][2][3] ; MemWays[2][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[1][2][3] ; MemWays[1][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][2][8] ; MemWays[0][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][2][5] ; MemWays[2][2][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][2][5] ; MemWays[0][2][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][2][5] ; MemWays[3][2][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][1][5] ; MemWays[0][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][1][5] ; MemWays[2][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][1][5] ; MemWays[3][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[1][1][3] ; MemWays[1][1][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][1][3] ; MemWays[0][1][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][1][3] ; MemWays[3][1][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][1][4] ; MemWays[0][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][1][4] ; MemWays[2][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[1][1][4] ; MemWays[1][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][1][4] ; MemWays[3][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][0][4] ; MemWays[0][0][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[1][0][4] ; MemWays[1][0][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[2][0][3] ; MemWays[2][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[0][0][3] ; MemWays[0][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; MemWays[3][0][3] ; MemWays[3][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.937 ; MemWays[1][0][0] ; MemWays[1][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.203      ;
+; 0.938 ; MemWays[1][0][6] ; MemWays[1][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.944 ; MemWays[0][2][2] ; MemWays[0][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.210      ;
+; 0.944 ; MemWays[0][0][6] ; MemWays[0][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.210      ;
+; 0.950 ; MemWays[2][2][0] ; MemWays[2][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.216      ;
+; 0.950 ; MemWays[1][2][1] ; MemWays[1][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.216      ;
+; 0.970 ; MemWays[1][1][1] ; MemWays[1][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.236      ;
+; 0.973 ; MemWays[2][0][1] ; MemWays[2][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.239      ;
+; 1.031 ; MemWays[0][2][6] ; MemWays[0][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.297      ;
+; 1.031 ; MemWays[2][1][6] ; MemWays[2][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.297      ;
+; 1.034 ; MemWays[2][0][6] ; MemWays[2][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.300      ;
+; 1.038 ; MemWays[1][1][6] ; MemWays[1][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.304      ;
+; 1.038 ; MemWays[0][1][6] ; MemWays[0][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.304      ;
+; 1.052 ; MemWays[2][2][6] ; MemWays[2][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.318      ;
+; 1.074 ; MemWays[3][1][1] ; MemWays[3][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.340      ;
+; 1.077 ; MemWays[3][2][6] ; MemWays[3][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.343      ;
+; 1.080 ; MemWays[0][1][0] ; MemWays[0][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.346      ;
+; 1.090 ; MemWays[3][0][1] ; MemWays[3][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.356      ;
+; 1.090 ; MemWays[0][0][2] ; MemWays[0][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.356      ;
+; 1.092 ; MemWays[3][0][0] ; MemWays[3][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.358      ;
+; 1.092 ; MemWays[3][2][2] ; MemWays[3][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.358      ;
+; 1.098 ; MemWays[0][1][2] ; MemWays[0][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.364      ;
+; 1.108 ; MemWays[3][1][0] ; MemWays[3][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.374      ;
+; 1.115 ; MemWays[1][0][1] ; MemWays[1][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.381      ;
+; 1.115 ; MemWays[1][1][2] ; MemWays[1][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.381      ;
+; 1.119 ; MemWays[3][1][2] ; MemWays[3][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.385      ;
+; 1.121 ; MemWays[0][1][1] ; MemWays[0][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.387      ;
+; 1.202 ; MemWays[0][2][1] ; MemWays[0][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.468      ;
+; 1.202 ; MemWays[3][0][6] ; MemWays[3][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.468      ;
+; 1.205 ; MemWays[2][1][0] ; MemWays[2][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.471      ;
+; 1.208 ; MemWays[1][2][6] ; MemWays[1][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.474      ;
+; 1.209 ; MemWays[2][1][2] ; MemWays[2][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.475      ;
+; 1.212 ; MemWays[3][2][1] ; MemWays[3][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.220 ; MemWays[3][1][6] ; MemWays[3][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.486      ;
+; 1.230 ; MemWays[2][2][1] ; MemWays[2][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.496      ;
+; 1.233 ; MemWays[1][1][0] ; MemWays[1][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.499      ;
+; 1.236 ; MemWays[0][0][1] ; MemWays[0][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.502      ;
+; 1.248 ; MemWays[0][2][0] ; MemWays[0][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.514      ;
+; 1.264 ; MemWays[0][0][0] ; MemWays[0][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.530      ;
+; 1.285 ; MemWays[2][0][2] ; MemWays[2][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.299 ; MemWays[3][0][8] ; MemWays[3][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.565      ;
+; 1.372 ; MemWays[1][2][2] ; MemWays[1][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.638      ;
+; 1.381 ; MemWays[2][1][1] ; MemWays[2][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.647      ;
+; 1.398 ; MemWays[2][2][2] ; MemWays[2][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.664      ;
+; 1.402 ; MemWays[2][0][0] ; MemWays[2][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.668      ;
+; 1.408 ; MemWays[3][2][0] ; MemWays[3][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.674      ;
+; 1.554 ; MemWays[3][0][2] ; MemWays[3][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.820      ;
+; 1.557 ; MemWays[1][2][8] ; MemWays[1][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.823      ;
+; 1.598 ; MemWays[3][2][8] ; MemWays[3][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.864      ;
+; 1.598 ; MemWays[1][0][3] ; MemWays[1][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.864      ;
+; 1.612 ; MemWays[2][2][8] ; MemWays[2][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.878      ;
+; 1.752 ; MemWays[1][2][0] ; MemWays[1][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.018      ;
+; 1.820 ; MemWays[1][0][8] ; MemWays[1][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.086      ;
+; 1.834 ; MemWays[1][0][2] ; MemWays[1][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.100      ;
+; 2.006 ; MemWays[0][0][8] ; MemWays[0][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.272      ;
+; 2.012 ; MemWays[2][1][8] ; MemWays[2][1][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.278      ;
+; 2.014 ; MemWays[1][1][8] ; MemWays[1][1][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.280      ;
+; 2.075 ; MemWays[3][1][7] ; MemWays[3][1][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.341      ;
+; 2.161 ; MemWays[0][0][7] ; MemWays[0][0][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.427      ;
+; 2.224 ; MemWays[1][1][7] ; MemWays[1][1][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.490      ;
+; 2.331 ; MemWays[0][1][8] ; MemWays[0][1][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.597      ;
+; 2.349 ; MemWays[3][0][4] ; MemWays[2][0][8] ; clock        ; clock       ; 0.000        ; -0.001     ; 2.614      ;
+; 2.353 ; MemWays[3][0][4] ; MemWays[3][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.619      ;
+; 2.368 ; MemWays[1][0][7] ; MemWays[1][0][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.634      ;
+; 2.384 ; MemWays[2][2][8] ; MemWays[0][2][7] ; clock        ; clock       ; 0.000        ; 0.016      ; 2.666      ;
+; 2.451 ; MemWays[3][0][4] ; MemWays[1][0][8] ; clock        ; clock       ; 0.000        ; -0.001     ; 2.716      ;
+; 2.452 ; MemWays[3][0][4] ; MemWays[0][0][8] ; clock        ; clock       ; 0.000        ; -0.001     ; 2.717      ;
+; 2.497 ; MemWays[2][0][7] ; MemWays[2][0][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.763      ;
+; 2.554 ; MemWays[3][2][7] ; MemWays[3][2][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 2.820      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][4] ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; address[*]  ; clock      ; 19.013 ; 19.013 ; Rise       ; clock           ;
+;  address[0] ; clock      ; 18.384 ; 18.384 ; Rise       ; clock           ;
+;  address[1] ; clock      ; 19.013 ; 19.013 ; Rise       ; clock           ;
+;  address[2] ; clock      ; 17.136 ; 17.136 ; Rise       ; clock           ;
+;  address[3] ; clock      ; 17.835 ; 17.835 ; Rise       ; clock           ;
+;  address[4] ; clock      ; 17.676 ; 17.676 ; Rise       ; clock           ;
+; wren        ; clock      ; 11.842 ; 11.842 ; Rise       ; clock           ;
+; write[*]    ; clock      ; 12.300 ; 12.300 ; Rise       ; clock           ;
+;  write[0]   ; clock      ; 7.226  ; 7.226  ; Rise       ; clock           ;
+;  write[1]   ; clock      ; 12.300 ; 12.300 ; Rise       ; clock           ;
+;  write[2]   ; clock      ; 11.687 ; 11.687 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; address[*]  ; clock      ; -3.524 ; -3.524 ; Rise       ; clock           ;
+;  address[0] ; clock      ; -3.734 ; -3.734 ; Rise       ; clock           ;
+;  address[1] ; clock      ; -4.142 ; -4.142 ; Rise       ; clock           ;
+;  address[2] ; clock      ; -3.524 ; -3.524 ; Rise       ; clock           ;
+;  address[3] ; clock      ; -4.034 ; -4.034 ; Rise       ; clock           ;
+;  address[4] ; clock      ; -3.729 ; -3.729 ; Rise       ; clock           ;
+; wren        ; clock      ; 0.733  ; 0.733  ; Rise       ; clock           ;
+; write[*]    ; clock      ; -0.338 ; -0.338 ; Rise       ; clock           ;
+;  write[0]   ; clock      ; -0.338 ; -0.338 ; Rise       ; clock           ;
+;  write[1]   ; clock      ; -3.681 ; -3.681 ; Rise       ; clock           ;
+;  write[2]   ; clock      ; -3.643 ; -3.643 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; read[*]   ; clock      ; 5.874 ; 5.874 ; Rise       ; clock           ;
+;  read[0]  ; clock      ; 5.874 ; 5.874 ; Rise       ; clock           ;
+;  read[1]  ; clock      ; 5.845 ; 5.845 ; Rise       ; clock           ;
+;  read[2]  ; clock      ; 5.808 ; 5.808 ; Rise       ; clock           ;
+;  read[3]  ; clock      ; 5.819 ; 5.819 ; Rise       ; clock           ;
+;  read[4]  ; clock      ; 5.828 ; 5.828 ; Rise       ; clock           ;
+;  read[5]  ; clock      ; 5.835 ; 5.835 ; Rise       ; clock           ;
+;  read[6]  ; clock      ; 5.814 ; 5.814 ; Rise       ; clock           ;
+;  read[7]  ; clock      ; 5.845 ; 5.845 ; Rise       ; clock           ;
+;  read[8]  ; clock      ; 5.864 ; 5.864 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; read[*]   ; clock      ; 5.808 ; 5.808 ; Rise       ; clock           ;
+;  read[0]  ; clock      ; 5.874 ; 5.874 ; Rise       ; clock           ;
+;  read[1]  ; clock      ; 5.845 ; 5.845 ; Rise       ; clock           ;
+;  read[2]  ; clock      ; 5.808 ; 5.808 ; Rise       ; clock           ;
+;  read[3]  ; clock      ; 5.819 ; 5.819 ; Rise       ; clock           ;
+;  read[4]  ; clock      ; 5.828 ; 5.828 ; Rise       ; clock           ;
+;  read[5]  ; clock      ; 5.835 ; 5.835 ; Rise       ; clock           ;
+;  read[6]  ; clock      ; 5.814 ; 5.814 ; Rise       ; clock           ;
+;  read[7]  ; clock      ; 5.845 ; 5.845 ; Rise       ; clock           ;
+;  read[8]  ; clock      ; 5.864 ; 5.864 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -5.532 ; -462.329      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -118.380              ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                      ;
++--------+------------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+--------------+--------------+-------------+--------------+------------+------------+
+; -5.532 ; MemWays[2][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.480      ;
+; -5.488 ; MemWays[0][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.436      ;
+; -5.464 ; MemWays[2][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.399      ;
+; -5.448 ; MemWays[0][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.365      ;
+; -5.420 ; MemWays[0][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.355      ;
+; -5.399 ; MemWays[2][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.316      ;
+; -5.395 ; MemWays[2][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.342      ;
+; -5.392 ; MemWays[0][1][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.340      ;
+; -5.380 ; MemWays[0][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.058     ; 6.284      ;
+; -5.376 ; MemWays[1][0][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.050     ; 6.288      ;
+; -5.368 ; MemWays[0][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.042     ; 6.288      ;
+; -5.352 ; MemWays[3][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.269      ;
+; -5.351 ; MemWays[0][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.298      ;
+; -5.344 ; MemWays[1][1][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.292      ;
+; -5.338 ; MemWays[3][1][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.270      ;
+; -5.333 ; MemWays[3][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.265      ;
+; -5.331 ; MemWays[2][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.058     ; 6.235      ;
+; -5.328 ; MemWays[0][0][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.050     ; 6.240      ;
+; -5.324 ; MemWays[0][1][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.259      ;
+; -5.317 ; MemWays[2][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.042     ; 6.237      ;
+; -5.315 ; MemWays[0][0][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.241      ;
+; -5.311 ; MemWays[0][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.046     ; 6.227      ;
+; -5.308 ; MemWays[1][0][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.063     ; 6.207      ;
+; -5.300 ; MemWays[0][0][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.055     ; 6.207      ;
+; -5.289 ; MemWays[2][2][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.221      ;
+; -5.288 ; MemWays[1][1][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.214      ;
+; -5.288 ; MemWays[1][1][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.205      ;
+; -5.285 ; MemWays[0][2][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.217      ;
+; -5.284 ; MemWays[3][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.058     ; 6.188      ;
+; -5.280 ; MemWays[0][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.228      ;
+; -5.276 ; MemWays[1][1][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.211      ;
+; -5.271 ; MemWays[2][1][4] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.219      ;
+; -5.270 ; MemWays[3][1][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.189      ;
+; -5.268 ; MemWays[1][0][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.194      ;
+; -5.265 ; MemWays[3][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.184      ;
+; -5.262 ; MemWays[2][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.046     ; 6.178      ;
+; -5.260 ; MemWays[0][0][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.063     ; 6.159      ;
+; -5.255 ; MemWays[0][1][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.202      ;
+; -5.249 ; MemWays[2][0][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.055     ; 6.156      ;
+; -5.247 ; MemWays[0][0][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.049     ; 6.160      ;
+; -5.244 ; MemWays[0][2][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.176      ;
+; -5.239 ; MemWays[1][0][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.051     ; 6.150      ;
+; -5.237 ; MemWays[2][1][4] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; -0.021     ; 6.178      ;
+; -5.236 ; MemWays[1][2][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.168      ;
+; -5.231 ; MemWays[0][0][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.150      ;
+; -5.230 ; MemWays[1][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.178      ;
+; -5.227 ; MemWays[0][1][4] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.175      ;
+; -5.221 ; MemWays[2][2][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.140      ;
+; -5.220 ; MemWays[1][1][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.049     ; 6.133      ;
+; -5.220 ; MemWays[1][1][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.058     ; 6.124      ;
+; -5.217 ; MemWays[0][2][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.136      ;
+; -5.215 ; MemWays[3][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.046     ; 6.131      ;
+; -5.212 ; MemWays[0][1][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.147      ;
+; -5.209 ; MemWays[2][1][4] ; read[4]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.144      ;
+; -5.208 ; MemWays[2][0][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.134      ;
+; -5.207 ; MemWays[1][1][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.154      ;
+; -5.201 ; MemWays[3][1][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.132      ;
+; -5.200 ; MemWays[1][0][8] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.049     ; 6.113      ;
+; -5.196 ; MemWays[3][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.127      ;
+; -5.193 ; MemWays[0][1][4] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; -0.021     ; 6.134      ;
+; -5.191 ; MemWays[0][0][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.051     ; 6.102      ;
+; -5.187 ; MemWays[0][1][8] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.104      ;
+; -5.180 ; MemWays[2][0][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.099      ;
+; -5.178 ; MemWays[0][0][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 6.103      ;
+; -5.176 ; MemWays[0][2][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.095      ;
+; -5.168 ; MemWays[1][2][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.043     ; 6.087      ;
+; -5.165 ; MemWays[3][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.091      ;
+; -5.165 ; MemWays[0][1][4] ; read[4]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.100      ;
+; -5.162 ; MemWays[1][1][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.027     ; 6.097      ;
+; -5.153 ; MemWays[0][1][8] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; -0.052     ; 6.063      ;
+; -5.152 ; MemWays[2][2][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.083      ;
+; -5.151 ; MemWays[1][1][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 6.076      ;
+; -5.151 ; MemWays[1][1][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.046     ; 6.067      ;
+; -5.151 ; MemWays[0][0][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.077      ;
+; -5.148 ; MemWays[0][2][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.080      ;
+; -5.148 ; MemWays[0][2][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.079      ;
+; -5.147 ; MemWays[2][2][4] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.048     ; 6.061      ;
+; -5.143 ; MemWays[0][1][5] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.090      ;
+; -5.140 ; MemWays[2][0][4] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.049     ; 6.053      ;
+; -5.138 ; MemWays[2][1][8] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.055      ;
+; -5.131 ; MemWays[0][1][3] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.014     ; 6.079      ;
+; -5.131 ; MemWays[1][0][8] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.037     ; 6.056      ;
+; -5.125 ; MemWays[0][1][8] ; read[4]~reg0 ; clock        ; clock       ; 1.000        ; -0.058     ; 6.029      ;
+; -5.121 ; MemWays[3][0][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.047      ;
+; -5.115 ; MemWays[1][0][4] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.050     ; 6.027      ;
+; -5.112 ; MemWays[2][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.012     ; 6.062      ;
+; -5.107 ; MemWays[0][2][3] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.038      ;
+; -5.107 ; MemWays[0][0][3] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.042     ; 6.027      ;
+; -5.104 ; MemWays[1][2][8] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.030     ; 6.036      ;
+; -5.104 ; MemWays[2][1][8] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; -0.052     ; 6.014      ;
+; -5.101 ; MemWays[2][0][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.027      ;
+; -5.099 ; MemWays[1][2][4] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.031     ; 6.030      ;
+; -5.098 ; MemWays[3][1][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.024      ;
+; -5.097 ; MemWays[3][0][3] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.049     ; 6.010      ;
+; -5.097 ; MemWays[0][1][3] ; read[3]~reg0 ; clock        ; clock       ; 1.000        ; -0.021     ; 6.038      ;
+; -5.093 ; MemWays[1][1][5] ; read[0]~reg0 ; clock        ; clock       ; 1.000        ; -0.015     ; 6.040      ;
+; -5.091 ; MemWays[3][1][8] ; read[7]~reg0 ; clock        ; clock       ; 1.000        ; -0.045     ; 6.008      ;
+; -5.087 ; MemWays[3][0][5] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.013      ;
+; -5.083 ; MemWays[1][0][3] ; read[1]~reg0 ; clock        ; clock       ; 1.000        ; -0.036     ; 6.009      ;
+; -5.083 ; MemWays[0][0][5] ; read[2]~reg0 ; clock        ; clock       ; 1.000        ; -0.049     ; 5.996      ;
++--------+------------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                          ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node        ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; MemWays[1][1][5] ; MemWays[1][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][0][5] ; MemWays[2][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][0][5] ; MemWays[0][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][0][5] ; MemWays[3][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[1][0][5] ; MemWays[1][0][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[1][2][4] ; MemWays[1][2][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][2][4] ; MemWays[0][2][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][2][4] ; MemWays[2][2][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][2][3] ; MemWays[3][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][2][3] ; MemWays[0][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][2][3] ; MemWays[2][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[1][2][3] ; MemWays[1][2][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][2][8] ; MemWays[0][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][2][5] ; MemWays[2][2][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][2][5] ; MemWays[0][2][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][2][5] ; MemWays[3][2][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][1][5] ; MemWays[0][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][1][5] ; MemWays[2][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][1][5] ; MemWays[3][1][5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[1][1][3] ; MemWays[1][1][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][1][3] ; MemWays[0][1][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][1][3] ; MemWays[3][1][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][1][4] ; MemWays[0][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][1][4] ; MemWays[2][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[1][1][4] ; MemWays[1][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][1][4] ; MemWays[3][1][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][0][4] ; MemWays[0][0][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[1][0][4] ; MemWays[1][0][4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[2][0][3] ; MemWays[2][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[0][0][3] ; MemWays[0][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; MemWays[3][0][3] ; MemWays[3][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.417 ; MemWays[1][0][0] ; MemWays[1][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.569      ;
+; 0.420 ; MemWays[0][2][2] ; MemWays[0][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.572      ;
+; 0.421 ; MemWays[1][0][6] ; MemWays[1][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.573      ;
+; 0.422 ; MemWays[0][0][6] ; MemWays[0][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.574      ;
+; 0.423 ; MemWays[1][2][1] ; MemWays[1][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.575      ;
+; 0.424 ; MemWays[2][2][0] ; MemWays[2][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.576      ;
+; 0.435 ; MemWays[1][1][1] ; MemWays[1][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.587      ;
+; 0.436 ; MemWays[2][0][1] ; MemWays[2][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.588      ;
+; 0.462 ; MemWays[2][1][6] ; MemWays[2][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.614      ;
+; 0.464 ; MemWays[0][2][6] ; MemWays[0][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.616      ;
+; 0.465 ; MemWays[2][0][6] ; MemWays[2][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.617      ;
+; 0.467 ; MemWays[1][1][6] ; MemWays[1][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.619      ;
+; 0.468 ; MemWays[0][1][6] ; MemWays[0][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.620      ;
+; 0.475 ; MemWays[2][2][6] ; MemWays[2][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.627      ;
+; 0.480 ; MemWays[3][0][1] ; MemWays[3][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.632      ;
+; 0.497 ; MemWays[3][1][1] ; MemWays[3][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.649      ;
+; 0.501 ; MemWays[0][1][0] ; MemWays[0][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501 ; MemWays[3][2][6] ; MemWays[3][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.653      ;
+; 0.505 ; MemWays[3][2][2] ; MemWays[3][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.508 ; MemWays[0][0][2] ; MemWays[0][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.660      ;
+; 0.509 ; MemWays[3][0][0] ; MemWays[3][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; MemWays[0][1][2] ; MemWays[0][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.661      ;
+; 0.516 ; MemWays[3][1][0] ; MemWays[3][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.668      ;
+; 0.519 ; MemWays[1][0][1] ; MemWays[1][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.671      ;
+; 0.521 ; MemWays[1][1][2] ; MemWays[1][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.673      ;
+; 0.529 ; MemWays[3][0][6] ; MemWays[3][0][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.681      ;
+; 0.530 ; MemWays[2][1][0] ; MemWays[2][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.682      ;
+; 0.530 ; MemWays[0][1][1] ; MemWays[0][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.682      ;
+; 0.530 ; MemWays[3][1][2] ; MemWays[3][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.682      ;
+; 0.531 ; MemWays[0][2][1] ; MemWays[0][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.683      ;
+; 0.535 ; MemWays[2][1][2] ; MemWays[2][1][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536 ; MemWays[1][2][6] ; MemWays[1][2][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.688      ;
+; 0.537 ; MemWays[3][2][1] ; MemWays[3][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.541 ; MemWays[3][1][6] ; MemWays[3][1][6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.693      ;
+; 0.544 ; MemWays[1][1][0] ; MemWays[1][1][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.696      ;
+; 0.547 ; MemWays[0][0][1] ; MemWays[0][0][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.699      ;
+; 0.549 ; MemWays[2][2][1] ; MemWays[2][2][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.701      ;
+; 0.555 ; MemWays[0][0][0] ; MemWays[0][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.707      ;
+; 0.559 ; MemWays[0][2][0] ; MemWays[0][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.711      ;
+; 0.575 ; MemWays[3][0][8] ; MemWays[3][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.727      ;
+; 0.582 ; MemWays[2][0][2] ; MemWays[2][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.734      ;
+; 0.605 ; MemWays[1][2][2] ; MemWays[1][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.757      ;
+; 0.639 ; MemWays[2][1][1] ; MemWays[2][1][1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.791      ;
+; 0.640 ; MemWays[2][0][0] ; MemWays[2][0][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.792      ;
+; 0.650 ; MemWays[2][2][2] ; MemWays[2][2][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.802      ;
+; 0.654 ; MemWays[3][2][0] ; MemWays[3][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.806      ;
+; 0.686 ; MemWays[3][0][2] ; MemWays[3][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.838      ;
+; 0.696 ; MemWays[1][2][8] ; MemWays[1][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.848      ;
+; 0.706 ; MemWays[3][2][8] ; MemWays[3][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.858      ;
+; 0.717 ; MemWays[2][2][8] ; MemWays[2][2][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.869      ;
+; 0.731 ; MemWays[1][0][3] ; MemWays[1][0][3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.883      ;
+; 0.769 ; MemWays[1][2][0] ; MemWays[1][2][0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.921      ;
+; 0.818 ; MemWays[1][0][2] ; MemWays[1][0][2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.970      ;
+; 0.819 ; MemWays[1][0][8] ; MemWays[1][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.971      ;
+; 0.892 ; MemWays[2][1][8] ; MemWays[2][1][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.044      ;
+; 0.899 ; MemWays[1][1][8] ; MemWays[1][1][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.051      ;
+; 0.902 ; MemWays[3][1][7] ; MemWays[3][1][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.054      ;
+; 0.928 ; MemWays[0][0][8] ; MemWays[0][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.080      ;
+; 0.929 ; MemWays[0][0][7] ; MemWays[0][0][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.081      ;
+; 0.960 ; MemWays[1][1][7] ; MemWays[1][1][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.112      ;
+; 1.030 ; MemWays[1][0][7] ; MemWays[1][0][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.182      ;
+; 1.037 ; MemWays[2][2][8] ; MemWays[0][2][7] ; clock        ; clock       ; 0.000        ; 0.015      ; 1.204      ;
+; 1.052 ; MemWays[0][1][8] ; MemWays[0][1][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 1.052 ; MemWays[3][0][4] ; MemWays[3][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 1.055 ; MemWays[3][0][4] ; MemWays[2][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.207      ;
+; 1.091 ; MemWays[2][0][7] ; MemWays[2][0][7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.243      ;
+; 1.098 ; MemWays[3][0][4] ; MemWays[1][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.250      ;
+; 1.098 ; MemWays[3][0][4] ; MemWays[0][0][8] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.250      ;
+; 1.123 ; MemWays[3][2][8] ; MemWays[0][2][7] ; clock        ; clock       ; 0.000        ; 0.015      ; 1.290      ;
++-------+------------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target           ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[0][2][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[0][2][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][0][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][1][8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; MemWays[1][2][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; MemWays[1][2][4] ;
++--------+--------------+----------------+------------------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; address[*]  ; clock      ; 8.685 ; 8.685 ; Rise       ; clock           ;
+;  address[0] ; clock      ; 8.416 ; 8.416 ; Rise       ; clock           ;
+;  address[1] ; clock      ; 8.685 ; 8.685 ; Rise       ; clock           ;
+;  address[2] ; clock      ; 7.867 ; 7.867 ; Rise       ; clock           ;
+;  address[3] ; clock      ; 8.190 ; 8.190 ; Rise       ; clock           ;
+;  address[4] ; clock      ; 8.124 ; 8.124 ; Rise       ; clock           ;
+; wren        ; clock      ; 4.817 ; 4.817 ; Rise       ; clock           ;
+; write[*]    ; clock      ; 5.830 ; 5.830 ; Rise       ; clock           ;
+;  write[0]   ; clock      ; 2.898 ; 2.898 ; Rise       ; clock           ;
+;  write[1]   ; clock      ; 5.830 ; 5.830 ; Rise       ; clock           ;
+;  write[2]   ; clock      ; 5.524 ; 5.524 ; Rise       ; clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; address[*]  ; clock      ; -1.857 ; -1.857 ; Rise       ; clock           ;
+;  address[0] ; clock      ; -1.979 ; -1.979 ; Rise       ; clock           ;
+;  address[1] ; clock      ; -2.148 ; -2.148 ; Rise       ; clock           ;
+;  address[2] ; clock      ; -1.857 ; -1.857 ; Rise       ; clock           ;
+;  address[3] ; clock      ; -2.129 ; -2.129 ; Rise       ; clock           ;
+;  address[4] ; clock      ; -1.966 ; -1.966 ; Rise       ; clock           ;
+; wren        ; clock      ; 0.700  ; 0.700  ; Rise       ; clock           ;
+; write[*]    ; clock      ; 0.160  ; 0.160  ; Rise       ; clock           ;
+;  write[0]   ; clock      ; 0.160  ; 0.160  ; Rise       ; clock           ;
+;  write[1]   ; clock      ; -1.944 ; -1.944 ; Rise       ; clock           ;
+;  write[2]   ; clock      ; -1.960 ; -1.960 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; read[*]   ; clock      ; 3.436 ; 3.436 ; Rise       ; clock           ;
+;  read[0]  ; clock      ; 3.436 ; 3.436 ; Rise       ; clock           ;
+;  read[1]  ; clock      ; 3.407 ; 3.407 ; Rise       ; clock           ;
+;  read[2]  ; clock      ; 3.374 ; 3.374 ; Rise       ; clock           ;
+;  read[3]  ; clock      ; 3.380 ; 3.380 ; Rise       ; clock           ;
+;  read[4]  ; clock      ; 3.394 ; 3.394 ; Rise       ; clock           ;
+;  read[5]  ; clock      ; 3.397 ; 3.397 ; Rise       ; clock           ;
+;  read[6]  ; clock      ; 3.376 ; 3.376 ; Rise       ; clock           ;
+;  read[7]  ; clock      ; 3.407 ; 3.407 ; Rise       ; clock           ;
+;  read[8]  ; clock      ; 3.426 ; 3.426 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; read[*]   ; clock      ; 3.374 ; 3.374 ; Rise       ; clock           ;
+;  read[0]  ; clock      ; 3.436 ; 3.436 ; Rise       ; clock           ;
+;  read[1]  ; clock      ; 3.407 ; 3.407 ; Rise       ; clock           ;
+;  read[2]  ; clock      ; 3.374 ; 3.374 ; Rise       ; clock           ;
+;  read[3]  ; clock      ; 3.380 ; 3.380 ; Rise       ; clock           ;
+;  read[4]  ; clock      ; 3.394 ; 3.394 ; Rise       ; clock           ;
+;  read[5]  ; clock      ; 3.397 ; 3.397 ; Rise       ; clock           ;
+;  read[6]  ; clock      ; 3.376 ; 3.376 ; Rise       ; clock           ;
+;  read[7]  ; clock      ; 3.407 ; 3.407 ; Rise       ; clock           ;
+;  read[8]  ; clock      ; 3.426 ; 3.426 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -13.966   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; -13.966   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -1207.926 ; 0.0   ; 0.0      ; 0.0     ; -118.38             ;
+;  clock           ; -1207.926 ; 0.000 ; N/A      ; N/A     ; -118.380            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; address[*]  ; clock      ; 19.013 ; 19.013 ; Rise       ; clock           ;
+;  address[0] ; clock      ; 18.384 ; 18.384 ; Rise       ; clock           ;
+;  address[1] ; clock      ; 19.013 ; 19.013 ; Rise       ; clock           ;
+;  address[2] ; clock      ; 17.136 ; 17.136 ; Rise       ; clock           ;
+;  address[3] ; clock      ; 17.835 ; 17.835 ; Rise       ; clock           ;
+;  address[4] ; clock      ; 17.676 ; 17.676 ; Rise       ; clock           ;
+; wren        ; clock      ; 11.842 ; 11.842 ; Rise       ; clock           ;
+; write[*]    ; clock      ; 12.300 ; 12.300 ; Rise       ; clock           ;
+;  write[0]   ; clock      ; 7.226  ; 7.226  ; Rise       ; clock           ;
+;  write[1]   ; clock      ; 12.300 ; 12.300 ; Rise       ; clock           ;
+;  write[2]   ; clock      ; 11.687 ; 11.687 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; address[*]  ; clock      ; -1.857 ; -1.857 ; Rise       ; clock           ;
+;  address[0] ; clock      ; -1.979 ; -1.979 ; Rise       ; clock           ;
+;  address[1] ; clock      ; -2.148 ; -2.148 ; Rise       ; clock           ;
+;  address[2] ; clock      ; -1.857 ; -1.857 ; Rise       ; clock           ;
+;  address[3] ; clock      ; -2.129 ; -2.129 ; Rise       ; clock           ;
+;  address[4] ; clock      ; -1.966 ; -1.966 ; Rise       ; clock           ;
+; wren        ; clock      ; 0.733  ; 0.733  ; Rise       ; clock           ;
+; write[*]    ; clock      ; 0.160  ; 0.160  ; Rise       ; clock           ;
+;  write[0]   ; clock      ; 0.160  ; 0.160  ; Rise       ; clock           ;
+;  write[1]   ; clock      ; -1.944 ; -1.944 ; Rise       ; clock           ;
+;  write[2]   ; clock      ; -1.960 ; -1.960 ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; read[*]   ; clock      ; 5.874 ; 5.874 ; Rise       ; clock           ;
+;  read[0]  ; clock      ; 5.874 ; 5.874 ; Rise       ; clock           ;
+;  read[1]  ; clock      ; 5.845 ; 5.845 ; Rise       ; clock           ;
+;  read[2]  ; clock      ; 5.808 ; 5.808 ; Rise       ; clock           ;
+;  read[3]  ; clock      ; 5.819 ; 5.819 ; Rise       ; clock           ;
+;  read[4]  ; clock      ; 5.828 ; 5.828 ; Rise       ; clock           ;
+;  read[5]  ; clock      ; 5.835 ; 5.835 ; Rise       ; clock           ;
+;  read[6]  ; clock      ; 5.814 ; 5.814 ; Rise       ; clock           ;
+;  read[7]  ; clock      ; 5.845 ; 5.845 ; Rise       ; clock           ;
+;  read[8]  ; clock      ; 5.864 ; 5.864 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; read[*]   ; clock      ; 3.374 ; 3.374 ; Rise       ; clock           ;
+;  read[0]  ; clock      ; 3.436 ; 3.436 ; Rise       ; clock           ;
+;  read[1]  ; clock      ; 3.407 ; 3.407 ; Rise       ; clock           ;
+;  read[2]  ; clock      ; 3.374 ; 3.374 ; Rise       ; clock           ;
+;  read[3]  ; clock      ; 3.380 ; 3.380 ; Rise       ; clock           ;
+;  read[4]  ; clock      ; 3.394 ; 3.394 ; Rise       ; clock           ;
+;  read[5]  ; clock      ; 3.397 ; 3.397 ; Rise       ; clock           ;
+;  read[6]  ; clock      ; 3.376 ; 3.376 ; Rise       ; clock           ;
+;  read[7]  ; clock      ; 3.407 ; 3.407 ; Rise       ; clock           ;
+;  read[8]  ; clock      ; 3.426 ; 3.426 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 2384794  ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 2384794  ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 741   ; 741  ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Tue Feb 02 23:43:11 2021
+Info: Command: quartus_sta Pratica1_Part3 -c Pratica1_Part3
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Pratica1_Part3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -13.966
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -13.966     -1207.926 clock 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -118.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.532
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.532      -462.329 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -118.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4549 megabytes
+    Info: Processing ended: Tue Feb 02 23:43:11 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
