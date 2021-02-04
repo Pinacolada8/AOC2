@@ -10,7 +10,7 @@ module Pratica1_Part3(address, write, wren, clock, read);
 	
 	reg [1:0] index;
 	reg hit;
-	reg noInvalid;
+	reg checkForOldData;
 	reg [2:0] tag;
 
 	// Matriz que representa todos os conjuntos e vias da cache
@@ -78,10 +78,10 @@ module Pratica1_Part3(address, write, wren, clock, read);
 					
 
 		// Miss ------------->
-		noInvalid = 1'b1;
+		checkForOldData = 1'b1;
 		if(hit == 1'b0) // Miss
 				begin 				
-					for(currentWay=0; currentWay<3; currentWay=currentWay+1)
+					for(currentWay= 0; currentWay < 4; currentWay= currentWay+1)
 						if ((MemWays[index][currentWay][8] == 1'b0))							// Checa a validade da via		
 							begin
 								if(wren == 1'b1) 														// Escrita
@@ -93,13 +93,13 @@ module Pratica1_Part3(address, write, wren, clock, read);
 										MemWays[index][currentWay] = {3'b110,tag,tag};		// Escreve o valor da tag como dado, em caso de Miss na leitura
 									end
 								read = MemWays[index][currentWay];
-								noInvalid = 1'b0;
+								checkForOldData = 1'b0;
 							end
 				end			
 					
-		if(noInvalid == 1'b1)
+		if(checkForOldData == 1'b1)
 			begin 				
-					for(currentWay=0; currentWay<3; currentWay=currentWay+1)
+					for(currentWay= 3; currentWay >= 0; currentWay= currentWay-1)
 						if ((MemWays[index][currentWay][7] == 1'b0))							// Checa o LRU da via	
 							begin
 								if(wren == 1'b1) 														// Escrita
@@ -110,7 +110,8 @@ module Pratica1_Part3(address, write, wren, clock, read);
 									begin
 										MemWays[index][currentWay] = {3'b110,tag,tag};		// Escreve o valor da tag como dado, em caso de Miss na leitura
 									end
-									read = MemWays[index][currentWay];									
+								read = MemWays[index][currentWay];
+								checkForOldData = 1'b0;
 							end
 				end
 				
