@@ -17,83 +17,16 @@
 # Top level modules:
 # 	Pratica1_Part3
 # 
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/wave.do
-# ** Error: Missing or invalid install path
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 2
-# ** Error: Missing or invalid install path
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 3
-# ** Error: Missing or invalid install path
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 4
-# .main_pane.wave.interior.cs.body.pw.wf
-# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/pratica1_part3/clock'.
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 37
-# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/pratica1_part3/wren'.
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 38
-# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/pratica1_part3/write'.
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 39
-# 0
-# ** Error: (vish-4014) No objects found matching 'NewSig:sim:/pratica1_part3/address'.
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 41
-# 0
-# ** Error: Netname is not editable or not present in the active waveform window
-# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 43
-# ** Error: Netname is not editable or not present in the active waveform window
-# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 44
-# ** Error: Netname is not editable or not present in the active waveform window
-# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern clock -initialvalue <value> -period <Time> -dutycycle <Time> -starttime <Time> -endtime <Time> netName
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 45
-# ** Error: Netname is not editable or not present in the active waveform window
-# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
-# Executing ONERROR command at macro E:\School\AOC2\Pratica1_Part3\simulation\modelsim\wave.do line 46
-# 0
 vsim work.Pratica1_Part3
 # vsim work.Pratica1_Part3 
 # Loading work.Pratica1_Part3
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/wave.do
+do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/waveCorrect.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
 # 1
-run
-run
-restart
-run
-restart
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/wave.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# 1
-# 1
-# 1
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/wave.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# 1
-# 1
-# 1
-force -freeze sim:/Pratica1_Part3/clock 0 0, 1 {50 ps} -r 100
-run
-run
-restart
-wave create -driver freeze -pattern constant -value zzz -range 2 0 -starttime 0ps -endtime 1000ps sim:/Pratica1_Part3/write
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/wave.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# 1
-# 1
-# 1
-run -all
-add wave -position insertpoint  \
-sim:/Pratica1_Part3/index
-restart
-run
+add wave -position 2 -autoscale 1 -format Literal -height 17 -editable 2 Edit:/Pratica1_Part3/address
+add wave -position 1 -autoscale 1 -format Literal -height 17 -editable 2 Edit:/Pratica1_Part3/address
 wave modify -driver freeze -pattern constant -value 01101 -range 4 0 -starttime 0ps -endtime 100ps Edit:/Pratica1_Part3/address
-restart
+run
 run
