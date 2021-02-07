@@ -6,6 +6,8 @@ entity Pratica1_Part3 is
         write           : in     vl_logic_vector(2 downto 0);
         wren            : in     vl_logic;
         clock           : in     vl_logic;
-        read            : out    vl_logic_vector(8 downto 0)
+        outWord         : out    vl_logic_vector(8 downto 0);
+        hit             : out    vl_logic;
+        writeBack       : out    vl_logic
     );
 end Pratica1_Part3;

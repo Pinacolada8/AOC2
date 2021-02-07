@@ -20,13 +20,16 @@
 vsim work.Pratica1_Part3
 # vsim work.Pratica1_Part3 
 # Loading work.Pratica1_Part3
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/waveCorrect.do
+do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/waveTestFinished.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
 # 1
-add wave -position 2 -autoscale 1 -format Literal -height 17 -editable 2 Edit:/Pratica1_Part3/address
-add wave -position 1 -autoscale 1 -format Literal -height 17 -editable 2 Edit:/Pratica1_Part3/address
-wave modify -driver freeze -pattern constant -value 01101 -range 4 0 -starttime 0ps -endtime 100ps Edit:/Pratica1_Part3/address
+run
+run
+run
+run
+run
+run
 run
 run

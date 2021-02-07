@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Pratica1_Part3
-Sun Feb 07 14:53:57 2021
+Sun Feb 07 19:24:39 2021
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Feb 07 14:53:57 2021 ;
+; EDA Netlist Writer Status ; Successful - Sun Feb 07 19:24:39 2021 ;
 ; Revision Name             ; Pratica1_Part3                        ;
 ; Top-level Entity Name     ; Pratica1_Part3                        ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Sun Feb 07 14:53:56 2021
+    Info: Processing started: Sun Feb 07 19:24:39 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Pratica1_Part3 -c Pratica1_Part3
 Info (204026): Generated files "Pratica1_Part3.vo", "Pratica1_Part3_fast.vo", "Pratica1_Part3_v.sdo" and "Pratica1_Part3_v_fast.sdo" in directory "E:/School/AOC2/Pratica1_Part3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4535 megabytes
-    Info: Processing ended: Sun Feb 07 14:53:57 2021
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4545 megabytes
+    Info: Processing ended: Sun Feb 07 19:24:39 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
