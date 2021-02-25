@@ -20,11 +20,15 @@
 vsim work.Pratica1_Part3
 # vsim work.Pratica1_Part3 
 # Loading work.Pratica1_Part3
-do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/waveTestFinished.do
+do E:/School/AOC2/Pratica1_Part3/simulation/modelsim/waveTest.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
 # 1
+add wave -position end -autoscale 1 -format Literal -height 17 -editable 2 Edit:/Pratica1_Part3/address
+add wave -position end -format Logic -height 17 -editable 2 Edit:/Pratica1_Part3/wren
+add wave -position end -autoscale 1 -format Literal -height 17 -editable 2 Edit:/Pratica1_Part3/write
+add wave -position end -format Logic -height 17 -editable 2 Edit:/Pratica1_Part3/clock
 run
 run
 run
@@ -32,4 +36,13 @@ run
 run
 run
 run
+restart
+run
+run
+run
+run
+run
+run
+run
+restart
 run
