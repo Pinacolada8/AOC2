@@ -1,0 +1,254 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\eduar\Desktop\Git\Processor\simulation\modelsim
+vAddsub
+IneLND8h6LCJXz>]3WFlK]1
+V:E[BbI]]QLj=SQO6>ioEG3
+Z1 dC:\Users\eduar\Desktop\Git\Processor\simulation\modelsim
+w1614314205
+8C:/Users/eduar/Desktop/Git/Processor/Addsub.v
+FC:/Users/eduar/Desktop/Git/Processor/Addsub.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor -O0
+n@addsub
+!i10b 1
+!s100 fb;Bm;e4ikB2z]CKmYOn53
+!s85 0
+!s108 1614366833.179000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Addsub.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Addsub.v|
+!s101 -O0
+vControlUnit
+IYXN11QemnLgS_`T[OaW^81
+VdDTDIeZ29<lY4EB6=eH8`0
+R1
+w1614365754
+8C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v
+FC:/Users/eduar/Desktop/Git/Processor/ControlUnit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@control@unit
+!i10b 1
+!s100 FE@Z9NCA^BiI^hHigk]C?0
+!s85 0
+!s108 1614366833.113000
+!s107 C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v|
+!s101 -O0
+vCounter
+!i10b 1
+!s100 HPfk@kd_zYFCo`:QbG6EY3
+ISC2FUz7?KY`NfoJU7bII^2
+Vn60VPQ@R;fW_5ZVLzGVo62
+R1
+w1614366773
+8C:/Users/eduar/Desktop/Git/Processor/Counter.v
+FC:/Users/eduar/Desktop/Git/Processor/Counter.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1614366833.365000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Counter.v|
+!s101 -O0
+R3
+R4
+n@counter
+vdec3to8
+IVU]98A>2_1@^HOHkAWD_h3
+V2U@bIaW;LG20I9][;hcGb3
+R1
+Z5 w1614309972
+8C:/Users/eduar/Desktop/Git/Processor/dec3to8.v
+FC:/Users/eduar/Desktop/Git/Processor/dec3to8.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ZMKRbH[LkH3@596c=26OK1
+!s85 0
+!s108 1614366833.055000
+!s107 C:/Users/eduar/Desktop/Git/Processor/dec3to8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/dec3to8.v|
+!s101 -O0
+vMemory
+IKc6;_B=JA^Vc8m_]klZ<43
+V:Tz;RBjaZ^j^4:3=D2>lN0
+R1
+w1614365369
+8C:/Users/eduar/Desktop/Git/Processor/Memory.v
+FC:/Users/eduar/Desktop/Git/Processor/Memory.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@memory
+!i10b 1
+!s100 `mBVbUDOSbW][9gc4`@Gm3
+!s85 0
+!s108 1614366833.306000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Memory.v|
+!s101 -O0
+vMultiplexer
+I70d6lfBVRO`^jl3MB>o`n2
+V0?@@1QKNoDCO2X`BkcRS`0
+R1
+w1614317050
+8C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v
+FC:/Users/eduar/Desktop/Git/Processor/Multiplexer.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@multiplexer
+!i10b 1
+!s100 4OKT3kg`cmkGc<O`hfW]b2
+!s85 0
+!s108 1614366832.991000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v|
+!s101 -O0
+vOrunit
+IU3QzLOzeLO4>@CCke>c7]0
+V7CjR6_ZcU96ZEAojZ;d9;2
+R1
+w1614314953
+8C:/Users/eduar/Desktop/Git/Processor/Orunit.v
+FC:/Users/eduar/Desktop/Git/Processor/Orunit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@orunit
+!i10b 1
+!s100 0lAbR@EndZ@MAPKT4mOkc3
+!s85 0
+!s108 1614366832.924000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Orunit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Orunit.v|
+!s101 -O0
+vProcessor
+IQA?XU:18fWWR1:Ii5gXLO2
+VR5aePTGHURF<HOJ:13Ufd1
+R1
+w1614366013
+8C:/Users/eduar/Desktop/Git/Processor/Processor.v
+FC:/Users/eduar/Desktop/Git/Processor/Processor.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@processor
+!i10b 1
+!s100 ghmF[N=[h_JT]Ff0@8?_C0
+!s85 0
+!s108 1614366833.240000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Processor.v|
+!s101 -O0
+vregn
+ISjd?ZJK1;9:D`BKefdjQ?1
+VUc6I3VM5DDQ[zOJ4a2HfK0
+R1
+w1614358894
+8C:/Users/eduar/Desktop/Git/Processor/regn.v
+FC:/Users/eduar/Desktop/Git/Processor/regn.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 T8<=Fce?JWznDlh4jnDTO3
+!s85 0
+!s108 1614366832.863000
+!s107 C:/Users/eduar/Desktop/Git/Processor/regn.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/regn.v|
+!s101 -O0
+vSetlessthan
+I?D62T19C]<BGeFe[P:92Z3
+VAY^cjPnf?jf12IjR9URHW2
+R1
+w1614317696
+8C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v
+FC:/Users/eduar/Desktop/Git/Processor/Setlessthan.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@setlessthan
+!i10b 1
+!s100 ^]`98^HFE>Z]K4eeFYhKC2
+!s85 0
+!s108 1614366832.795000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v|
+!s101 -O0
+vShiftlog
+IIj93zeV8<Sk^1llK^S8AD0
+Vh=L8PJ1joXFbkAIlG]IM90
+R1
+w1614314352
+8C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v
+FC:/Users/eduar/Desktop/Git/Processor/Shiftlog.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@shiftlog
+!i10b 1
+!s100 2NaTkB^nTVlzm^TCE1hlT0
+!s85 0
+!s108 1614366832.731000
+!s107 C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v|
+!s101 -O0
+vupcount
+I;k4?FYXzH^XbF:_WfAGAn0
+V6F[W^nTWj`kicHA9eP>;d3
+R1
+R5
+8C:/Users/eduar/Desktop/Git/Processor/upcount.v
+FC:/Users/eduar/Desktop/Git/Processor/upcount.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 kM4GAdjYG^c;6S8FmP8S:2
+!s85 0
+!s108 1614366832.673000
+!s107 C:/Users/eduar/Desktop/Git/Processor/upcount.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/upcount.v|
+!s101 -O0

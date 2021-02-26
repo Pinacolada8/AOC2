@@ -1,0 +1,1292 @@
+TimeQuest Timing Analyzer report for Processor
+Fri Feb 26 16:13:39 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'PClock'
+ 12. Slow Model Hold: 'PClock'
+ 13. Slow Model Minimum Pulse Width: 'PClock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'PClock'
+ 26. Fast Model Hold: 'PClock'
+ 27. Fast Model Minimum Pulse Width: 'PClock'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Processor                                          ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; PClock     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PClock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 106.75 MHz ; 106.75 MHz      ; PClock     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; PClock ; -8.368 ; -864.579      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; PClock ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; PClock ; -1.380 ; -156.380             ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'PClock'                                                                                                                                   ;
++--------+----------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -8.368 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 9.404      ;
+; -8.360 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 9.396      ;
+; -8.278 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.311      ;
+; -8.270 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.303      ;
+; -8.257 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 9.296      ;
+; -8.249 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 9.288      ;
+; -8.242 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 9.281      ;
+; -8.234 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 9.273      ;
+; -8.100 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 9.136      ;
+; -8.097 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.130      ;
+; -8.089 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.122      ;
+; -8.013 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 9.049      ;
+; -8.010 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.043      ;
+; -7.989 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 9.028      ;
+; -7.974 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 9.013      ;
+; -7.973 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.006      ;
+; -7.972 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 9.005      ;
+; -7.970 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 9.006      ;
+; -7.965 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.998      ;
+; -7.964 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.997      ;
+; -7.951 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.984      ;
+; -7.943 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.976      ;
+; -7.923 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.956      ;
+; -7.902 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.941      ;
+; -7.888 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.922      ;
+; -7.887 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.926      ;
+; -7.880 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.914      ;
+; -7.878 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.911      ;
+; -7.859 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.898      ;
+; -7.855 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.894      ;
+; -7.847 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.886      ;
+; -7.844 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.883      ;
+; -7.829 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.862      ;
+; -7.825 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.859      ;
+; -7.817 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.851      ;
+; -7.810 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.847      ;
+; -7.809 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.008     ; 8.837      ;
+; -7.804 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.837      ;
+; -7.801 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.008     ; 8.829      ;
+; -7.796 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.829      ;
+; -7.744 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 8.780      ;
+; -7.742 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.775      ;
+; -7.738 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[3]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.771      ;
+; -7.730 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[3]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.763      ;
+; -7.720 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.754      ;
+; -7.705 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.738      ;
+; -7.704 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.737      ;
+; -7.699 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 8.739      ;
+; -7.699 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.732      ;
+; -7.694 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 8.730      ;
+; -7.686 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 8.722      ;
+; -7.684 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 8.724      ;
+; -7.683 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.716      ;
+; -7.676 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.713      ;
+; -7.655 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.692      ;
+; -7.654 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.687      ;
+; -7.647 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.684      ;
+; -7.633 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.672      ;
+; -7.620 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.654      ;
+; -7.618 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.657      ;
+; -7.618 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.651      ;
+; -7.617 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.650      ;
+; -7.596 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.629      ;
+; -7.587 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.626      ;
+; -7.586 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.620      ;
+; -7.574 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.607      ;
+; -7.573 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.606      ;
+; -7.566 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.605      ;
+; -7.565 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 8.605      ;
+; -7.558 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.597      ;
+; -7.557 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.591      ;
+; -7.553 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.586      ;
+; -7.550 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.008     ; 8.578      ;
+; -7.550 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 8.590      ;
+; -7.545 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.578      ;
+; -7.541 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.008     ; 8.569      ;
+; -7.539 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.573      ;
+; -7.536 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.569      ;
+; -7.533 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.567      ;
+; -7.510 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[1]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 8.548      ;
+; -7.505 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.008     ; 8.533      ;
+; -7.502 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[1]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 8.540      ;
+; -7.500 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.539      ;
+; -7.500 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.533      ;
+; -7.496 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.533      ;
+; -7.488 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.522      ;
+; -7.488 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.525      ;
+; -7.473 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.506      ;
+; -7.470 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.504      ;
+; -7.470 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[3]  ; PClock       ; PClock      ; 1.000        ; -0.003     ; 8.503      ;
+; -7.455 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 8.494      ;
+; -7.426 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 8.462      ;
+; -7.425 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.462      ;
+; -7.425 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.459      ;
+; -7.417 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.454      ;
+; -7.415 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.449      ;
+; -7.414 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.448      ;
+; -7.405 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.439      ;
+; -7.393 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.002     ; 8.427      ;
+; -7.387 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 8.424      ;
++--------+----------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'PClock'                                                                                                                                 ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[14] ; ControlUnit:Control|regn:reg_1|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[12] ; ControlUnit:Control|regn:reg_1|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[15] ; ControlUnit:Control|regn:reg_1|Q[15] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[10] ; ControlUnit:Control|regn:reg_1|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_1|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_1|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[13] ; ControlUnit:Control|regn:reg_1|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[9]  ; ControlUnit:Control|regn:reg_1|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_1|Q[11] ; ControlUnit:Control|regn:reg_1|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ControlUnit:Control|regn:reg_I|Q[0]  ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.802 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[3]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.068      ;
+; 0.825 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.091      ;
+; 0.834 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.100      ;
+; 0.886 ; ControlUnit:Control|regn:reg_2|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.152      ;
+; 0.889 ; ControlUnit:Control|regn:reg_2|Q[1]  ; ControlUnit:Control|regn:reg_0|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.155      ;
+; 0.938 ; ControlUnit:Control|regn:reg_1|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.204      ;
+; 0.950 ; ControlUnit:Control|regn:reg_1|Q[11] ; ControlUnit:Control|regn:reg_2|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.216      ;
+; 0.969 ; ControlUnit:Control|regn:reg_A|Q[4]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.235      ;
+; 0.973 ; ControlUnit:Control|regn:reg_2|Q[5]  ; ControlUnit:Control|regn:reg_1|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.239      ;
+; 0.978 ; ControlUnit:Control|regn:reg_A|Q[5]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.244      ;
+; 0.980 ; ControlUnit:Control|regn:reg_2|Q[14] ; ControlUnit:Control|regn:reg_1|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.246      ;
+; 0.985 ; ControlUnit:Control|regn:reg_2|Q[4]  ; ControlUnit:Control|regn:reg_1|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.251      ;
+; 0.986 ; ControlUnit:Control|regn:reg_A|Q[9]  ; ControlUnit:Control|regn:reg_G|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.252      ;
+; 0.998 ; ControlUnit:Control|regn:reg_1|Q[1]  ; ControlUnit:Control|regn:reg_0|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.264      ;
+; 1.003 ; ControlUnit:Control|regn:reg_1|Q[13] ; ControlUnit:Control|regn:reg_0|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.270      ;
+; 1.009 ; ControlUnit:Control|regn:reg_A|Q[13] ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.276      ;
+; 1.011 ; ControlUnit:Control|regn:reg_A|Q[11] ; ControlUnit:Control|regn:reg_G|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.278      ;
+; 1.012 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_0|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.278      ;
+; 1.014 ; ControlUnit:Control|regn:reg_A|Q[10] ; ControlUnit:Control|regn:reg_G|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.280      ;
+; 1.014 ; ControlUnit:Control|regn:reg_A|Q[15] ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.280      ;
+; 1.016 ; ControlUnit:Control|regn:reg_A|Q[0]  ; ControlUnit:Control|regn:reg_G|Q[0]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.281      ;
+; 1.018 ; ControlUnit:Control|regn:reg_A|Q[2]  ; ControlUnit:Control|regn:reg_G|Q[2]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.283      ;
+; 1.055 ; ControlUnit:Control|regn:reg_2|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.321      ;
+; 1.055 ; ControlUnit:Control|regn:reg_3|Q[12] ; ControlUnit:Control|regn:reg_1|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.321      ;
+; 1.055 ; ControlUnit:Control|regn:reg_3|Q[5]  ; ControlUnit:Control|regn:reg_1|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.321      ;
+; 1.056 ; ControlUnit:Control|regn:reg_3|Q[4]  ; ControlUnit:Control|regn:reg_1|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.322      ;
+; 1.057 ; ControlUnit:Control|regn:reg_2|Q[7]  ; ControlUnit:Control|regn:reg_0|Q[7]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.323      ;
+; 1.063 ; ControlUnit:Control|regn:reg_3|Q[15] ; ControlUnit:Control|regn:reg_1|Q[15] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.329      ;
+; 1.064 ; ControlUnit:Control|regn:reg_3|Q[10] ; ControlUnit:Control|regn:reg_1|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.330      ;
+; 1.072 ; ControlUnit:Control|regn:reg_3|Q[14] ; ControlUnit:Control|regn:reg_1|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.338      ;
+; 1.090 ; ControlUnit:Control|regn:reg_2|Q[11] ; ControlUnit:Control|regn:reg_1|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.356      ;
+; 1.096 ; ControlUnit:Control|regn:reg_2|Q[13] ; ControlUnit:Control|regn:reg_1|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.362      ;
+; 1.134 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_3|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.400      ;
+; 1.143 ; ControlUnit:Control|regn:reg_1|Q[13] ; ControlUnit:Control|regn:reg_2|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.409      ;
+; 1.154 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_3|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.420      ;
+; 1.185 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.451      ;
+; 1.197 ; ControlUnit:Control|regn:reg_2|Q[10] ; ControlUnit:Control|regn:reg_1|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.464      ;
+; 1.199 ; ControlUnit:Control|regn:reg_F|Q[4]  ; ControlUnit:Control|regn:reg_H|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.002      ; 1.467      ;
+; 1.212 ; ControlUnit:Control|regn:reg_2|Q[0]  ; ControlUnit:Control|regn:reg_0|Q[0]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.478      ;
+; 1.218 ; ControlUnit:Control|regn:reg_3|Q[7]  ; ControlUnit:Control|regn:reg_0|Q[7]  ; PClock       ; PClock      ; 0.000        ; 0.004      ; 1.488      ;
+; 1.220 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.486      ;
+; 1.244 ; ControlUnit:Control|regn:reg_A|Q[7]  ; ControlUnit:Control|regn:reg_G|Q[7]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.510      ;
+; 1.249 ; ControlUnit:Control|regn:reg_1|Q[9]  ; ControlUnit:Control|regn:reg_2|Q[9]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.514      ;
+; 1.251 ; ControlUnit:Control|regn:reg_3|Q[9]  ; ControlUnit:Control|regn:reg_1|Q[9]  ; PClock       ; PClock      ; 0.000        ; -0.005     ; 1.512      ;
+; 1.256 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.522      ;
+; 1.258 ; ControlUnit:Control|regn:reg_0|Q[9]  ; ControlUnit:Control|regn:reg_1|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.524      ;
+; 1.267 ; ControlUnit:Control|regn:reg_3|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.004      ; 1.537      ;
+; 1.274 ; ControlUnit:Control|regn:reg_3|Q[13] ; ControlUnit:Control|regn:reg_1|Q[13] ; PClock       ; PClock      ; 0.000        ; -0.006     ; 1.534      ;
+; 1.276 ; ControlUnit:Control|regn:reg_F|Q[8]  ; ControlUnit:Control|regn:reg_H|Q[8]  ; PClock       ; PClock      ; 0.000        ; 0.004      ; 1.546      ;
+; 1.280 ; ControlUnit:Control|regn:reg_0|Q[3]  ; ControlUnit:Control|regn:reg_F|Q[3]  ; PClock       ; PClock      ; 0.000        ; -0.012     ; 1.534      ;
+; 1.291 ; ControlUnit:Control|regn:reg_2|Q[15] ; ControlUnit:Control|regn:reg_1|Q[15] ; PClock       ; PClock      ; 0.000        ; -0.007     ; 1.550      ;
+; 1.291 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[3]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.557      ;
+; 1.294 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[7]  ; PClock       ; PClock      ; 0.000        ; -0.002     ; 1.558      ;
+; 1.297 ; ControlUnit:Control|regn:reg_0|Q[1]  ; ControlUnit:Control|regn:reg_0|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.563      ;
+; 1.301 ; ControlUnit:Control|regn:reg_F|Q[10] ; ControlUnit:Control|regn:reg_H|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.004      ; 1.571      ;
+; 1.302 ; ControlUnit:Control|regn:reg_F|Q[2]  ; ControlUnit:Control|regn:reg_H|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.002      ; 1.570      ;
+; 1.308 ; ControlUnit:Control|regn:reg_A|Q[12] ; ControlUnit:Control|regn:reg_G|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.574      ;
+; 1.324 ; ControlUnit:Control|regn:reg_F|Q[15] ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.589      ;
+; 1.324 ; ControlUnit:Control|regn:reg_0|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.590      ;
+; 1.326 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_H|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.592      ;
+; 1.327 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.593      ;
+; 1.332 ; ControlUnit:Control|regn:reg_F|Q[0]  ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.598      ;
+; 1.345 ; ControlUnit:Control|regn:reg_1|Q[10] ; ControlUnit:Control|regn:reg_H|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.611      ;
+; 1.356 ; ControlUnit:Control|regn:reg_A|Q[4]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.622      ;
+; 1.362 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.628      ;
+; 1.364 ; ControlUnit:Control|regn:reg_1|Q[11] ; ControlUnit:Control|regn:reg_F|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.631      ;
+; 1.364 ; ControlUnit:Control|regn:reg_A|Q[5]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.630      ;
+; 1.365 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[8]  ; PClock       ; PClock      ; 0.000        ; -0.002     ; 1.629      ;
+; 1.369 ; ControlUnit:Control|regn:reg_A|Q[9]  ; ControlUnit:Control|regn:reg_G|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.635      ;
+; 1.371 ; ControlUnit:Control|regn:reg_3|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.637      ;
+; 1.372 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_A|Q[5]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.637      ;
+; 1.374 ; ControlUnit:Control|regn:reg_1|Q[12] ; ControlUnit:Control|regn:reg_H|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.641      ;
+; 1.375 ; ControlUnit:Control|regn:reg_1|Q[14] ; ControlUnit:Control|regn:reg_0|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.641      ;
+; 1.376 ; ControlUnit:Control|regn:reg_1|Q[14] ; ControlUnit:Control|regn:reg_2|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.642      ;
+; 1.380 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_0|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.646      ;
+; 1.381 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_2|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.647      ;
+; 1.385 ; ControlUnit:Control|regn:reg_1|Q[10] ; ControlUnit:Control|regn:reg_0|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.651      ;
+; 1.386 ; ControlUnit:Control|regn:reg_1|Q[9]  ; ControlUnit:Control|regn:reg_0|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.652      ;
+; 1.388 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_2|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.654      ;
+; 1.388 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_A|Q[4]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.653      ;
+; 1.393 ; ControlUnit:Control|regn:reg_1|Q[10] ; ControlUnit:Control|regn:reg_2|Q[10] ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.658      ;
+; 1.395 ; ControlUnit:Control|regn:reg_A|Q[13] ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.662      ;
+; 1.397 ; ControlUnit:Control|regn:reg_A|Q[11] ; ControlUnit:Control|regn:reg_G|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 1.664      ;
+; 1.400 ; ControlUnit:Control|regn:reg_A|Q[10] ; ControlUnit:Control|regn:reg_G|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.666      ;
+; 1.402 ; ControlUnit:Control|regn:reg_A|Q[0]  ; ControlUnit:Control|regn:reg_G|Q[1]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.667      ;
+; 1.404 ; ControlUnit:Control|regn:reg_A|Q[2]  ; ControlUnit:Control|regn:reg_G|Q[3]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.669      ;
+; 1.414 ; ControlUnit:Control|regn:reg_0|Q[12] ; ControlUnit:Control|regn:reg_1|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.680      ;
+; 1.415 ; ControlUnit:Control|regn:reg_1|Q[12] ; ControlUnit:Control|regn:reg_2|Q[12] ; PClock       ; PClock      ; 0.000        ; -0.001     ; 1.680      ;
+; 1.418 ; ControlUnit:Control|regn:reg_H|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 1.684      ;
+; 1.426 ; ControlUnit:Control|regn:reg_1|Q[11] ; ControlUnit:Control|regn:reg_A|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.004      ; 1.696      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'PClock'                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; PClock ; Rise       ; PClock                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_3|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_3|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_3|Q[10] ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; MClock    ; PClock     ; 1.499  ; 1.499  ; Rise       ; PClock          ;
+; Resetn    ; PClock     ; 13.056 ; 13.056 ; Rise       ; PClock          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; MClock    ; PClock     ; -0.727 ; -0.727 ; Rise       ; PClock          ;
+; Resetn    ; PClock     ; -0.666 ; -0.666 ; Rise       ; PClock          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; BusWires[*]   ; PClock     ; 12.263 ; 12.263 ; Rise       ; PClock          ;
+;  BusWires[0]  ; PClock     ; 11.677 ; 11.677 ; Rise       ; PClock          ;
+;  BusWires[1]  ; PClock     ; 11.462 ; 11.462 ; Rise       ; PClock          ;
+;  BusWires[2]  ; PClock     ; 11.548 ; 11.548 ; Rise       ; PClock          ;
+;  BusWires[3]  ; PClock     ; 12.082 ; 12.082 ; Rise       ; PClock          ;
+;  BusWires[4]  ; PClock     ; 11.218 ; 11.218 ; Rise       ; PClock          ;
+;  BusWires[5]  ; PClock     ; 11.394 ; 11.394 ; Rise       ; PClock          ;
+;  BusWires[6]  ; PClock     ; 11.473 ; 11.473 ; Rise       ; PClock          ;
+;  BusWires[7]  ; PClock     ; 11.810 ; 11.810 ; Rise       ; PClock          ;
+;  BusWires[8]  ; PClock     ; 11.355 ; 11.355 ; Rise       ; PClock          ;
+;  BusWires[9]  ; PClock     ; 11.757 ; 11.757 ; Rise       ; PClock          ;
+;  BusWires[10] ; PClock     ; 11.931 ; 11.931 ; Rise       ; PClock          ;
+;  BusWires[11] ; PClock     ; 11.335 ; 11.335 ; Rise       ; PClock          ;
+;  BusWires[12] ; PClock     ; 11.575 ; 11.575 ; Rise       ; PClock          ;
+;  BusWires[13] ; PClock     ; 11.635 ; 11.635 ; Rise       ; PClock          ;
+;  BusWires[14] ; PClock     ; 11.923 ; 11.923 ; Rise       ; PClock          ;
+;  BusWires[15] ; PClock     ; 12.263 ; 12.263 ; Rise       ; PClock          ;
+; Done          ; PClock     ; 8.383  ; 8.383  ; Rise       ; PClock          ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; BusWires[*]   ; PClock     ; 6.668 ; 6.668 ; Rise       ; PClock          ;
+;  BusWires[0]  ; PClock     ; 7.742 ; 7.742 ; Rise       ; PClock          ;
+;  BusWires[1]  ; PClock     ; 7.528 ; 7.528 ; Rise       ; PClock          ;
+;  BusWires[2]  ; PClock     ; 7.386 ; 7.386 ; Rise       ; PClock          ;
+;  BusWires[3]  ; PClock     ; 8.130 ; 8.130 ; Rise       ; PClock          ;
+;  BusWires[4]  ; PClock     ; 6.668 ; 6.668 ; Rise       ; PClock          ;
+;  BusWires[5]  ; PClock     ; 6.853 ; 6.853 ; Rise       ; PClock          ;
+;  BusWires[6]  ; PClock     ; 7.515 ; 7.515 ; Rise       ; PClock          ;
+;  BusWires[7]  ; PClock     ; 7.851 ; 7.851 ; Rise       ; PClock          ;
+;  BusWires[8]  ; PClock     ; 7.453 ; 7.453 ; Rise       ; PClock          ;
+;  BusWires[9]  ; PClock     ; 6.972 ; 6.972 ; Rise       ; PClock          ;
+;  BusWires[10] ; PClock     ; 7.163 ; 7.163 ; Rise       ; PClock          ;
+;  BusWires[11] ; PClock     ; 6.732 ; 6.732 ; Rise       ; PClock          ;
+;  BusWires[12] ; PClock     ; 7.052 ; 7.052 ; Rise       ; PClock          ;
+;  BusWires[13] ; PClock     ; 6.971 ; 6.971 ; Rise       ; PClock          ;
+;  BusWires[14] ; PClock     ; 7.405 ; 7.405 ; Rise       ; PClock          ;
+;  BusWires[15] ; PClock     ; 7.407 ; 7.407 ; Rise       ; PClock          ;
+; Done          ; PClock     ; 7.776 ; 7.776 ; Rise       ; PClock          ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; Resetn     ; BusWires[0] ; 13.965 ; 13.965 ; 13.965 ; 13.965 ;
+; Resetn     ; BusWires[1] ; 14.802 ; 14.802 ; 14.802 ; 14.802 ;
+; Resetn     ; BusWires[2] ; 13.775 ; 13.775 ; 13.775 ; 13.775 ;
+; Resetn     ; BusWires[3] ; 14.135 ; 14.135 ; 14.135 ; 14.135 ;
+; Resetn     ; BusWires[4] ; 13.622 ; 13.622 ; 13.622 ; 13.622 ;
+; Resetn     ; BusWires[6] ; 14.173 ; 14.173 ; 14.173 ; 14.173 ;
+; Resetn     ; BusWires[7] ; 15.498 ; 15.498 ; 15.498 ; 15.498 ;
+; Resetn     ; BusWires[8] ; 13.984 ; 13.984 ; 13.984 ; 13.984 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++------------------------------------------------------------+
+; Minimum Propagation Delay                                  ;
++------------+-------------+--------+-------+-------+--------+
+; Input Port ; Output Port ; RR     ; RF    ; FR    ; FF     ;
++------------+-------------+--------+-------+-------+--------+
+; Resetn     ; BusWires[0] ; 9.597  ; 8.863 ; 8.863 ; 9.597  ;
+; Resetn     ; BusWires[1] ; 9.134  ; 9.134 ; 9.134 ; 9.134  ;
+; Resetn     ; BusWires[2] ; 8.822  ; 9.407 ; 9.407 ; 8.822  ;
+; Resetn     ; BusWires[3] ; 9.620  ; 9.146 ; 9.146 ; 9.620  ;
+; Resetn     ; BusWires[4] ; 8.521  ; 9.213 ; 9.213 ; 8.521  ;
+; Resetn     ; BusWires[6] ; 8.738  ; 8.738 ; 8.738 ; 8.738  ;
+; Resetn     ; BusWires[7] ; 10.362 ; 9.255 ; 9.255 ; 10.362 ;
+; Resetn     ; BusWires[8] ; 8.466  ; 8.466 ; 8.466 ; 8.466  ;
++------------+-------------+--------+-------+-------+--------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; PClock ; -3.114 ; -298.126      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; PClock ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; PClock ; -1.380 ; -156.380             ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'PClock'                                                                                                                                   ;
++--------+----------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.114 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 4.148      ;
+; -3.111 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 4.145      ;
+; -3.080 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 4.116      ;
+; -3.077 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 4.113      ;
+; -3.071 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 4.105      ;
+; -3.068 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 4.102      ;
+; -3.034 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 4.065      ;
+; -3.031 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 4.062      ;
+; -3.010 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 4.040      ;
+; -3.007 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 4.041      ;
+; -3.007 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 4.037      ;
+; -2.974 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 4.008      ;
+; -2.973 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 4.009      ;
+; -2.964 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.998      ;
+; -2.962 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.996      ;
+; -2.957 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.987      ;
+; -2.954 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.984      ;
+; -2.948 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.979      ;
+; -2.945 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.976      ;
+; -2.940 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 3.976      ;
+; -2.935 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.966      ;
+; -2.932 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.963      ;
+; -2.931 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.965      ;
+; -2.930 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.007     ; 3.955      ;
+; -2.928 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 3.964      ;
+; -2.927 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.958      ;
+; -2.927 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.007     ; 3.952      ;
+; -2.919 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.953      ;
+; -2.903 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.003      ; 3.938      ;
+; -2.903 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.933      ;
+; -2.897 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.931      ;
+; -2.894 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.928      ;
+; -2.891 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.925      ;
+; -2.885 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.916      ;
+; -2.880 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.911      ;
+; -2.870 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.900      ;
+; -2.869 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.005      ; 3.906      ;
+; -2.864 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.897      ;
+; -2.863 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.004      ; 3.899      ;
+; -2.861 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.892      ;
+; -2.861 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.894      ;
+; -2.860 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 3.895      ;
+; -2.858 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.888      ;
+; -2.858 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.889      ;
+; -2.857 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.888      ;
+; -2.854 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.888      ;
+; -2.854 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.885      ;
+; -2.850 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.880      ;
+; -2.843 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.874      ;
+; -2.841 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.872      ;
+; -2.840 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.871      ;
+; -2.836 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.007     ; 3.861      ;
+; -2.831 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.007     ; 3.856      ;
+; -2.828 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.859      ;
+; -2.823 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; 0.000      ; 3.855      ;
+; -2.823 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.007     ; 3.848      ;
+; -2.821 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[10] ; PClock       ; PClock      ; 1.000        ; 0.003      ; 3.856      ;
+; -2.817 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.848      ;
+; -2.817 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.847      ;
+; -2.808 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.839      ;
+; -2.805 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.835      ;
+; -2.803 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[3]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.834      ;
+; -2.800 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[3]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.831      ;
+; -2.799 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.830      ;
+; -2.796 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.827      ;
+; -2.795 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.826      ;
+; -2.793 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.823      ;
+; -2.787 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.821      ;
+; -2.787 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[9]  ; PClock       ; PClock      ; 1.000        ; 0.005      ; 3.824      ;
+; -2.783 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.814      ;
+; -2.778 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.812      ;
+; -2.778 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[8]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 3.813      ;
+; -2.777 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.004      ; 3.813      ;
+; -2.775 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.809      ;
+; -2.774 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.004      ; 3.810      ;
+; -2.773 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_J|Q[1]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 3.808      ;
+; -2.770 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.803      ;
+; -2.770 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_J|Q[1]  ; PClock       ; PClock      ; 1.000        ; 0.003      ; 3.805      ;
+; -2.767 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.800      ;
+; -2.763 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.794      ;
+; -2.758 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.789      ;
+; -2.757 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.790      ;
+; -2.754 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[2]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.785      ;
+; -2.750 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[15] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.781      ;
+; -2.746 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.777      ;
+; -2.745 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.779      ;
+; -2.741 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[6]  ; PClock       ; PClock      ; 1.000        ; 0.000      ; 3.773      ;
+; -2.740 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[5]  ; PClock       ; PClock      ; 1.000        ; -0.002     ; 3.770      ;
+; -2.740 ; ControlUnit:Control|upcount:Tstrp|Q[0] ; ControlUnit:Control|regn:reg_J|Q[0]  ; PClock       ; PClock      ; 1.000        ; 0.002      ; 3.774      ;
+; -2.737 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; 0.000      ; 3.769      ;
+; -2.736 ; ControlUnit:Control|upcount:Tstrp|Q[1] ; ControlUnit:Control|regn:reg_J|Q[12] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.767      ;
+; -2.735 ; ControlUnit:Control|regn:reg_IR|Q[8]   ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.768      ;
+; -2.732 ; ControlUnit:Control|regn:reg_IR|Q[6]   ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.765      ;
+; -2.731 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[7]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.762      ;
+; -2.724 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; 0.000      ; 3.756      ;
+; -2.719 ; ControlUnit:Control|regn:reg_IR|Q[1]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.006     ; 3.745      ;
+; -2.718 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_J|Q[11] ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.749      ;
+; -2.717 ; ControlUnit:Control|regn:reg_IR|Q[0]   ; ControlUnit:Control|regn:reg_J|Q[4]  ; PClock       ; PClock      ; 1.000        ; -0.001     ; 3.748      ;
+; -2.713 ; ControlUnit:Control|regn:reg_IR|Q[2]   ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 1.000        ; -0.007     ; 3.738      ;
+; -2.712 ; ControlUnit:Control|regn:reg_IR|Q[7]   ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 1.000        ; 0.001      ; 3.745      ;
++--------+----------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'PClock'                                                                                                                                 ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[14] ; ControlUnit:Control|regn:reg_1|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[12] ; ControlUnit:Control|regn:reg_1|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[15] ; ControlUnit:Control|regn:reg_1|Q[15] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[10] ; ControlUnit:Control|regn:reg_1|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_1|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_1|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[13] ; ControlUnit:Control|regn:reg_1|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[9]  ; ControlUnit:Control|regn:reg_1|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_1|Q[11] ; ControlUnit:Control|regn:reg_1|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ControlUnit:Control|regn:reg_I|Q[0]  ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.362 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[3]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.367 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.372 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.430 ; ControlUnit:Control|regn:reg_2|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.582      ;
+; 0.431 ; ControlUnit:Control|regn:reg_2|Q[1]  ; ControlUnit:Control|regn:reg_0|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.583      ;
+; 0.436 ; ControlUnit:Control|regn:reg_A|Q[4]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.588      ;
+; 0.442 ; ControlUnit:Control|regn:reg_A|Q[5]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.594      ;
+; 0.444 ; ControlUnit:Control|regn:reg_A|Q[9]  ; ControlUnit:Control|regn:reg_G|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.596      ;
+; 0.447 ; ControlUnit:Control|regn:reg_A|Q[11] ; ControlUnit:Control|regn:reg_G|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.600      ;
+; 0.449 ; ControlUnit:Control|regn:reg_A|Q[13] ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.602      ;
+; 0.453 ; ControlUnit:Control|regn:reg_A|Q[10] ; ControlUnit:Control|regn:reg_G|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.605      ;
+; 0.453 ; ControlUnit:Control|regn:reg_A|Q[15] ; ControlUnit:Control|regn:reg_G|Q[15] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.605      ;
+; 0.453 ; ControlUnit:Control|regn:reg_A|Q[0]  ; ControlUnit:Control|regn:reg_G|Q[0]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.604      ;
+; 0.454 ; ControlUnit:Control|regn:reg_A|Q[2]  ; ControlUnit:Control|regn:reg_G|Q[2]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.605      ;
+; 0.454 ; ControlUnit:Control|regn:reg_1|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.606      ;
+; 0.462 ; ControlUnit:Control|regn:reg_2|Q[5]  ; ControlUnit:Control|regn:reg_1|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.614      ;
+; 0.467 ; ControlUnit:Control|regn:reg_2|Q[14] ; ControlUnit:Control|regn:reg_1|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.619      ;
+; 0.470 ; ControlUnit:Control|regn:reg_2|Q[4]  ; ControlUnit:Control|regn:reg_1|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.622      ;
+; 0.477 ; ControlUnit:Control|regn:reg_1|Q[13] ; ControlUnit:Control|regn:reg_0|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.630      ;
+; 0.477 ; ControlUnit:Control|regn:reg_1|Q[1]  ; ControlUnit:Control|regn:reg_0|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.629      ;
+; 0.478 ; ControlUnit:Control|regn:reg_1|Q[11] ; ControlUnit:Control|regn:reg_2|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.630      ;
+; 0.483 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_0|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.635      ;
+; 0.494 ; ControlUnit:Control|regn:reg_2|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.646      ;
+; 0.494 ; ControlUnit:Control|regn:reg_3|Q[12] ; ControlUnit:Control|regn:reg_1|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495 ; ControlUnit:Control|regn:reg_2|Q[7]  ; ControlUnit:Control|regn:reg_0|Q[7]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495 ; ControlUnit:Control|regn:reg_3|Q[4]  ; ControlUnit:Control|regn:reg_1|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495 ; ControlUnit:Control|regn:reg_3|Q[5]  ; ControlUnit:Control|regn:reg_1|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.647      ;
+; 0.497 ; ControlUnit:Control|regn:reg_3|Q[15] ; ControlUnit:Control|regn:reg_1|Q[15] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.649      ;
+; 0.499 ; ControlUnit:Control|regn:reg_3|Q[10] ; ControlUnit:Control|regn:reg_1|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.652      ;
+; 0.503 ; ControlUnit:Control|regn:reg_3|Q[14] ; ControlUnit:Control|regn:reg_1|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.655      ;
+; 0.507 ; ControlUnit:Control|regn:reg_2|Q[11] ; ControlUnit:Control|regn:reg_1|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; ControlUnit:Control|regn:reg_2|Q[13] ; ControlUnit:Control|regn:reg_1|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.661      ;
+; 0.512 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.664      ;
+; 0.535 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.687      ;
+; 0.545 ; ControlUnit:Control|regn:reg_F|Q[4]  ; ControlUnit:Control|regn:reg_H|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.697      ;
+; 0.547 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[3]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.699      ;
+; 0.553 ; ControlUnit:Control|regn:reg_A|Q[7]  ; ControlUnit:Control|regn:reg_G|Q[7]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.705      ;
+; 0.553 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[7]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.704      ;
+; 0.559 ; ControlUnit:Control|regn:reg_2|Q[0]  ; ControlUnit:Control|regn:reg_0|Q[0]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.711      ;
+; 0.560 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_3|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.712      ;
+; 0.560 ; ControlUnit:Control|regn:reg_2|Q[10] ; ControlUnit:Control|regn:reg_1|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.002      ; 0.714      ;
+; 0.562 ; ControlUnit:Control|regn:reg_1|Q[13] ; ControlUnit:Control|regn:reg_2|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.714      ;
+; 0.570 ; ControlUnit:Control|regn:reg_A|Q[3]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.722      ;
+; 0.572 ; ControlUnit:Control|regn:reg_1|Q[4]  ; ControlUnit:Control|regn:reg_3|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.724      ;
+; 0.574 ; ControlUnit:Control|regn:reg_A|Q[4]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.726      ;
+; 0.575 ; ControlUnit:Control|regn:reg_0|Q[1]  ; ControlUnit:Control|regn:reg_0|Q[1]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.727      ;
+; 0.580 ; ControlUnit:Control|regn:reg_F|Q[8]  ; ControlUnit:Control|regn:reg_H|Q[8]  ; PClock       ; PClock      ; 0.000        ; 0.003      ; 0.735      ;
+; 0.582 ; ControlUnit:Control|regn:reg_A|Q[9]  ; ControlUnit:Control|regn:reg_G|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.734      ;
+; 0.582 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.734      ;
+; 0.582 ; ControlUnit:Control|regn:reg_A|Q[5]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.734      ;
+; 0.583 ; ControlUnit:Control|regn:reg_3|Q[7]  ; ControlUnit:Control|regn:reg_0|Q[7]  ; PClock       ; PClock      ; 0.000        ; 0.003      ; 0.738      ;
+; 0.585 ; ControlUnit:Control|regn:reg_0|Q[9]  ; ControlUnit:Control|regn:reg_1|Q[9]  ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.738      ;
+; 0.585 ; ControlUnit:Control|regn:reg_0|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.737      ;
+; 0.587 ; ControlUnit:Control|regn:reg_A|Q[11] ; ControlUnit:Control|regn:reg_G|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.740      ;
+; 0.588 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[8]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.739      ;
+; 0.589 ; ControlUnit:Control|regn:reg_A|Q[13] ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.742      ;
+; 0.592 ; ControlUnit:Control|regn:reg_A|Q[12] ; ControlUnit:Control|regn:reg_G|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.744      ;
+; 0.593 ; ControlUnit:Control|regn:reg_F|Q[2]  ; ControlUnit:Control|regn:reg_H|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; ControlUnit:Control|regn:reg_A|Q[0]  ; ControlUnit:Control|regn:reg_G|Q[1]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.744      ;
+; 0.593 ; ControlUnit:Control|regn:reg_A|Q[10] ; ControlUnit:Control|regn:reg_G|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.745      ;
+; 0.594 ; ControlUnit:Control|regn:reg_A|Q[2]  ; ControlUnit:Control|regn:reg_G|Q[3]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.745      ;
+; 0.595 ; ControlUnit:Control|regn:reg_1|Q[9]  ; ControlUnit:Control|regn:reg_2|Q[9]  ; PClock       ; PClock      ; 0.000        ; -0.002     ; 0.745      ;
+; 0.596 ; ControlUnit:Control|regn:reg_F|Q[10] ; ControlUnit:Control|regn:reg_H|Q[10] ; PClock       ; PClock      ; 0.000        ; 0.003      ; 0.751      ;
+; 0.598 ; ControlUnit:Control|regn:reg_3|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.003      ; 0.753      ;
+; 0.599 ; ControlUnit:Control|regn:reg_F|Q[15] ; ControlUnit:Control|regn:reg_I|Q[0]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.750      ;
+; 0.601 ; ControlUnit:Control|regn:reg_F|Q[0]  ; ControlUnit:Control|regn:reg_J|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.753      ;
+; 0.602 ; ControlUnit:Control|regn:reg_3|Q[9]  ; ControlUnit:Control|regn:reg_1|Q[9]  ; PClock       ; PClock      ; 0.000        ; -0.004     ; 0.750      ;
+; 0.605 ; ControlUnit:Control|regn:reg_3|Q[13] ; ControlUnit:Control|regn:reg_1|Q[13] ; PClock       ; PClock      ; 0.000        ; -0.006     ; 0.751      ;
+; 0.605 ; ControlUnit:Control|regn:reg_3|Q[2]  ; ControlUnit:Control|regn:reg_0|Q[2]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.757      ;
+; 0.609 ; ControlUnit:Control|regn:reg_A|Q[4]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.761      ;
+; 0.613 ; ControlUnit:Control|regn:reg_0|Q[3]  ; ControlUnit:Control|regn:reg_F|Q[3]  ; PClock       ; PClock      ; 0.000        ; -0.010     ; 0.755      ;
+; 0.616 ; ControlUnit:Control|regn:reg_2|Q[15] ; ControlUnit:Control|regn:reg_1|Q[15] ; PClock       ; PClock      ; 0.000        ; -0.006     ; 0.762      ;
+; 0.617 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[5]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.769      ;
+; 0.617 ; ControlUnit:Control|regn:reg_A|Q[9]  ; ControlUnit:Control|regn:reg_G|Q[11] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.769      ;
+; 0.618 ; ControlUnit:Control|regn:reg_0|Q[12] ; ControlUnit:Control|regn:reg_1|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.771      ;
+; 0.619 ; ControlUnit:Control|regn:reg_H|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.772      ;
+; 0.622 ; ControlUnit:Control|regn:reg_A|Q[11] ; ControlUnit:Control|regn:reg_G|Q[13] ; PClock       ; PClock      ; 0.000        ; 0.001      ; 0.775      ;
+; 0.623 ; ControlUnit:Control|regn:reg_A|Q[6]  ; ControlUnit:Control|regn:reg_G|Q[9]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.774      ;
+; 0.628 ; ControlUnit:Control|regn:reg_1|Q[5]  ; ControlUnit:Control|regn:reg_H|Q[5]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.779      ;
+; 0.628 ; ControlUnit:Control|regn:reg_A|Q[0]  ; ControlUnit:Control|regn:reg_G|Q[2]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.779      ;
+; 0.628 ; ControlUnit:Control|regn:reg_A|Q[10] ; ControlUnit:Control|regn:reg_G|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.780      ;
+; 0.629 ; ControlUnit:Control|regn:reg_A|Q[2]  ; ControlUnit:Control|regn:reg_G|Q[4]  ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.780      ;
+; 0.635 ; ControlUnit:Control|regn:reg_A|Q[14] ; ControlUnit:Control|regn:reg_G|Q[14] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.787      ;
+; 0.638 ; ControlUnit:Control|regn:reg_1|Q[10] ; ControlUnit:Control|regn:reg_H|Q[10] ; PClock       ; PClock      ; 0.000        ; -0.001     ; 0.789      ;
+; 0.646 ; ControlUnit:Control|regn:reg_H|Q[3]  ; ControlUnit:Control|regn:reg_F|Q[3]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.798      ;
+; 0.648 ; ControlUnit:Control|regn:reg_0|Q[6]  ; ControlUnit:Control|regn:reg_0|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.800      ;
+; 0.652 ; ControlUnit:Control|regn:reg_A|Q[1]  ; ControlUnit:Control|regn:reg_G|Q[6]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; ControlUnit:Control|regn:reg_A|Q[8]  ; ControlUnit:Control|regn:reg_G|Q[8]  ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; ControlUnit:Control|regn:reg_A|Q[9]  ; ControlUnit:Control|regn:reg_G|Q[12] ; PClock       ; PClock      ; 0.000        ; 0.000      ; 0.804      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'PClock'                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; PClock ; Rise       ; PClock                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_0|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_1|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_2|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_3|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; PClock ; Rise       ; ControlUnit:Control|regn:reg_3|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; PClock ; Rise       ; ControlUnit:Control|regn:reg_3|Q[10] ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; MClock    ; PClock     ; 0.384 ; 0.384 ; Rise       ; PClock          ;
+; Resetn    ; PClock     ; 5.266 ; 5.266 ; Rise       ; PClock          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; MClock    ; PClock     ; -0.070 ; -0.070 ; Rise       ; PClock          ;
+; Resetn    ; PClock     ; 0.008  ; 0.008  ; Rise       ; PClock          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; BusWires[*]   ; PClock     ; 6.225 ; 6.225 ; Rise       ; PClock          ;
+;  BusWires[0]  ; PClock     ; 5.952 ; 5.952 ; Rise       ; PClock          ;
+;  BusWires[1]  ; PClock     ; 5.862 ; 5.862 ; Rise       ; PClock          ;
+;  BusWires[2]  ; PClock     ; 5.890 ; 5.890 ; Rise       ; PClock          ;
+;  BusWires[3]  ; PClock     ; 6.158 ; 6.158 ; Rise       ; PClock          ;
+;  BusWires[4]  ; PClock     ; 5.744 ; 5.744 ; Rise       ; PClock          ;
+;  BusWires[5]  ; PClock     ; 5.810 ; 5.810 ; Rise       ; PClock          ;
+;  BusWires[6]  ; PClock     ; 5.842 ; 5.842 ; Rise       ; PClock          ;
+;  BusWires[7]  ; PClock     ; 6.000 ; 6.000 ; Rise       ; PClock          ;
+;  BusWires[8]  ; PClock     ; 5.818 ; 5.818 ; Rise       ; PClock          ;
+;  BusWires[9]  ; PClock     ; 5.990 ; 5.990 ; Rise       ; PClock          ;
+;  BusWires[10] ; PClock     ; 6.064 ; 6.064 ; Rise       ; PClock          ;
+;  BusWires[11] ; PClock     ; 5.783 ; 5.783 ; Rise       ; PClock          ;
+;  BusWires[12] ; PClock     ; 5.924 ; 5.924 ; Rise       ; PClock          ;
+;  BusWires[13] ; PClock     ; 5.953 ; 5.953 ; Rise       ; PClock          ;
+;  BusWires[14] ; PClock     ; 6.049 ; 6.049 ; Rise       ; PClock          ;
+;  BusWires[15] ; PClock     ; 6.225 ; 6.225 ; Rise       ; PClock          ;
+; Done          ; PClock     ; 4.562 ; 4.562 ; Rise       ; PClock          ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; BusWires[*]   ; PClock     ; 3.805 ; 3.805 ; Rise       ; PClock          ;
+;  BusWires[0]  ; PClock     ; 4.251 ; 4.251 ; Rise       ; PClock          ;
+;  BusWires[1]  ; PClock     ; 4.193 ; 4.193 ; Rise       ; PClock          ;
+;  BusWires[2]  ; PClock     ; 4.111 ; 4.111 ; Rise       ; PClock          ;
+;  BusWires[3]  ; PClock     ; 4.473 ; 4.473 ; Rise       ; PClock          ;
+;  BusWires[4]  ; PClock     ; 3.805 ; 3.805 ; Rise       ; PClock          ;
+;  BusWires[5]  ; PClock     ; 3.876 ; 3.876 ; Rise       ; PClock          ;
+;  BusWires[6]  ; PClock     ; 4.154 ; 4.154 ; Rise       ; PClock          ;
+;  BusWires[7]  ; PClock     ; 4.313 ; 4.313 ; Rise       ; PClock          ;
+;  BusWires[8]  ; PClock     ; 4.157 ; 4.157 ; Rise       ; PClock          ;
+;  BusWires[9]  ; PClock     ; 3.947 ; 3.947 ; Rise       ; PClock          ;
+;  BusWires[10] ; PClock     ; 4.022 ; 4.022 ; Rise       ; PClock          ;
+;  BusWires[11] ; PClock     ; 3.829 ; 3.829 ; Rise       ; PClock          ;
+;  BusWires[12] ; PClock     ; 3.994 ; 3.994 ; Rise       ; PClock          ;
+;  BusWires[13] ; PClock     ; 3.951 ; 3.951 ; Rise       ; PClock          ;
+;  BusWires[14] ; PClock     ; 4.133 ; 4.133 ; Rise       ; PClock          ;
+;  BusWires[15] ; PClock     ; 4.138 ; 4.138 ; Rise       ; PClock          ;
+; Done          ; PClock     ; 4.293 ; 4.293 ; Rise       ; PClock          ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; Resetn     ; BusWires[0] ; 6.438 ; 6.438 ; 6.438 ; 6.438 ;
+; Resetn     ; BusWires[1] ; 6.821 ; 6.821 ; 6.821 ; 6.821 ;
+; Resetn     ; BusWires[2] ; 6.344 ; 6.344 ; 6.344 ; 6.344 ;
+; Resetn     ; BusWires[3] ; 6.532 ; 6.532 ; 6.532 ; 6.532 ;
+; Resetn     ; BusWires[4] ; 6.314 ; 6.314 ; 6.314 ; 6.314 ;
+; Resetn     ; BusWires[6] ; 6.517 ; 6.517 ; 6.517 ; 6.517 ;
+; Resetn     ; BusWires[7] ; 7.152 ; 7.152 ; 7.152 ; 7.152 ;
+; Resetn     ; BusWires[8] ; 6.459 ; 6.459 ; 6.459 ; 6.459 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; Resetn     ; BusWires[0] ; 4.681 ; 4.366 ; 4.366 ; 4.681 ;
+; Resetn     ; BusWires[1] ; 4.504 ; 4.504 ; 4.504 ; 4.504 ;
+; Resetn     ; BusWires[2] ; 4.346 ; 4.587 ; 4.587 ; 4.346 ;
+; Resetn     ; BusWires[3] ; 4.717 ; 4.533 ; 4.533 ; 4.717 ;
+; Resetn     ; BusWires[4] ; 4.213 ; 4.510 ; 4.510 ; 4.213 ;
+; Resetn     ; BusWires[6] ; 4.298 ; 4.298 ; 4.298 ; 4.298 ;
+; Resetn     ; BusWires[7] ; 5.025 ; 4.566 ; 4.566 ; 5.025 ;
+; Resetn     ; BusWires[8] ; 4.225 ; 4.225 ; 4.225 ; 4.225 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -8.368   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  PClock          ; -8.368   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -864.579 ; 0.0   ; 0.0      ; 0.0     ; -156.38             ;
+;  PClock          ; -864.579 ; 0.000 ; N/A      ; N/A     ; -156.380            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; MClock    ; PClock     ; 1.499  ; 1.499  ; Rise       ; PClock          ;
+; Resetn    ; PClock     ; 13.056 ; 13.056 ; Rise       ; PClock          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; MClock    ; PClock     ; -0.070 ; -0.070 ; Rise       ; PClock          ;
+; Resetn    ; PClock     ; 0.008  ; 0.008  ; Rise       ; PClock          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Clock to Output Times                                                       ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; BusWires[*]   ; PClock     ; 12.263 ; 12.263 ; Rise       ; PClock          ;
+;  BusWires[0]  ; PClock     ; 11.677 ; 11.677 ; Rise       ; PClock          ;
+;  BusWires[1]  ; PClock     ; 11.462 ; 11.462 ; Rise       ; PClock          ;
+;  BusWires[2]  ; PClock     ; 11.548 ; 11.548 ; Rise       ; PClock          ;
+;  BusWires[3]  ; PClock     ; 12.082 ; 12.082 ; Rise       ; PClock          ;
+;  BusWires[4]  ; PClock     ; 11.218 ; 11.218 ; Rise       ; PClock          ;
+;  BusWires[5]  ; PClock     ; 11.394 ; 11.394 ; Rise       ; PClock          ;
+;  BusWires[6]  ; PClock     ; 11.473 ; 11.473 ; Rise       ; PClock          ;
+;  BusWires[7]  ; PClock     ; 11.810 ; 11.810 ; Rise       ; PClock          ;
+;  BusWires[8]  ; PClock     ; 11.355 ; 11.355 ; Rise       ; PClock          ;
+;  BusWires[9]  ; PClock     ; 11.757 ; 11.757 ; Rise       ; PClock          ;
+;  BusWires[10] ; PClock     ; 11.931 ; 11.931 ; Rise       ; PClock          ;
+;  BusWires[11] ; PClock     ; 11.335 ; 11.335 ; Rise       ; PClock          ;
+;  BusWires[12] ; PClock     ; 11.575 ; 11.575 ; Rise       ; PClock          ;
+;  BusWires[13] ; PClock     ; 11.635 ; 11.635 ; Rise       ; PClock          ;
+;  BusWires[14] ; PClock     ; 11.923 ; 11.923 ; Rise       ; PClock          ;
+;  BusWires[15] ; PClock     ; 12.263 ; 12.263 ; Rise       ; PClock          ;
+; Done          ; PClock     ; 8.383  ; 8.383  ; Rise       ; PClock          ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; BusWires[*]   ; PClock     ; 3.805 ; 3.805 ; Rise       ; PClock          ;
+;  BusWires[0]  ; PClock     ; 4.251 ; 4.251 ; Rise       ; PClock          ;
+;  BusWires[1]  ; PClock     ; 4.193 ; 4.193 ; Rise       ; PClock          ;
+;  BusWires[2]  ; PClock     ; 4.111 ; 4.111 ; Rise       ; PClock          ;
+;  BusWires[3]  ; PClock     ; 4.473 ; 4.473 ; Rise       ; PClock          ;
+;  BusWires[4]  ; PClock     ; 3.805 ; 3.805 ; Rise       ; PClock          ;
+;  BusWires[5]  ; PClock     ; 3.876 ; 3.876 ; Rise       ; PClock          ;
+;  BusWires[6]  ; PClock     ; 4.154 ; 4.154 ; Rise       ; PClock          ;
+;  BusWires[7]  ; PClock     ; 4.313 ; 4.313 ; Rise       ; PClock          ;
+;  BusWires[8]  ; PClock     ; 4.157 ; 4.157 ; Rise       ; PClock          ;
+;  BusWires[9]  ; PClock     ; 3.947 ; 3.947 ; Rise       ; PClock          ;
+;  BusWires[10] ; PClock     ; 4.022 ; 4.022 ; Rise       ; PClock          ;
+;  BusWires[11] ; PClock     ; 3.829 ; 3.829 ; Rise       ; PClock          ;
+;  BusWires[12] ; PClock     ; 3.994 ; 3.994 ; Rise       ; PClock          ;
+;  BusWires[13] ; PClock     ; 3.951 ; 3.951 ; Rise       ; PClock          ;
+;  BusWires[14] ; PClock     ; 4.133 ; 4.133 ; Rise       ; PClock          ;
+;  BusWires[15] ; PClock     ; 4.138 ; 4.138 ; Rise       ; PClock          ;
+; Done          ; PClock     ; 4.293 ; 4.293 ; Rise       ; PClock          ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; Resetn     ; BusWires[0] ; 13.965 ; 13.965 ; 13.965 ; 13.965 ;
+; Resetn     ; BusWires[1] ; 14.802 ; 14.802 ; 14.802 ; 14.802 ;
+; Resetn     ; BusWires[2] ; 13.775 ; 13.775 ; 13.775 ; 13.775 ;
+; Resetn     ; BusWires[3] ; 14.135 ; 14.135 ; 14.135 ; 14.135 ;
+; Resetn     ; BusWires[4] ; 13.622 ; 13.622 ; 13.622 ; 13.622 ;
+; Resetn     ; BusWires[6] ; 14.173 ; 14.173 ; 14.173 ; 14.173 ;
+; Resetn     ; BusWires[7] ; 15.498 ; 15.498 ; 15.498 ; 15.498 ;
+; Resetn     ; BusWires[8] ; 13.984 ; 13.984 ; 13.984 ; 13.984 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; Resetn     ; BusWires[0] ; 4.681 ; 4.366 ; 4.366 ; 4.681 ;
+; Resetn     ; BusWires[1] ; 4.504 ; 4.504 ; 4.504 ; 4.504 ;
+; Resetn     ; BusWires[2] ; 4.346 ; 4.587 ; 4.587 ; 4.346 ;
+; Resetn     ; BusWires[3] ; 4.717 ; 4.533 ; 4.533 ; 4.717 ;
+; Resetn     ; BusWires[4] ; 4.213 ; 4.510 ; 4.510 ; 4.213 ;
+; Resetn     ; BusWires[6] ; 4.298 ; 4.298 ; 4.298 ; 4.298 ;
+; Resetn     ; BusWires[7] ; 5.025 ; 4.566 ; 4.566 ; 5.025 ;
+; Resetn     ; BusWires[8] ; 4.225 ; 4.225 ; 4.225 ; 4.225 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; PClock     ; PClock   ; 412443   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; PClock     ; PClock   ; 412443   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 115   ; 115  ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 285   ; 285  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Fri Feb 26 16:13:38 2021
+Info: Command: quartus_sta Processor -c Processor
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Processor.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name PClock PClock
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "count|Add0~8|combout"
+    Warning (332126): Node "count|Add0~8|datab"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "count|Add0~6|combout"
+    Warning (332126): Node "count|Add0~6|datab"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "count|Add0~4|combout"
+    Warning (332126): Node "count|Add0~4|datab"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "count|Add0~2|datab"
+    Warning (332126): Node "count|Add0~2|combout"
+Warning (332125): Found combinational loop of 4 nodes
+    Warning (332126): Node "count|n~8|combout"
+    Warning (332126): Node "count|Add0~0|datab"
+    Warning (332126): Node "count|Add0~0|combout"
+    Warning (332126): Node "count|n~8|datad"
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -8.368
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -8.368      -864.579 PClock 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 PClock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -156.380 PClock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.114
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.114      -298.126 PClock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 PClock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -156.380 PClock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4555 megabytes
+    Info: Processing ended: Fri Feb 26 16:13:39 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
