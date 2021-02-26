@@ -1,0 +1,76 @@
+# Reading H:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do Processor_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying H:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied H:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/Processor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/upcount.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module upcount
+# 
+# Top level modules:
+# 	upcount
+# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/dec3to8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dec3to8
+# 
+# Top level modules:
+# 	dec3to8
+# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/regn.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regn
+# 
+# Top level modules:
+# 	regn
+# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/Addsub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Addsub
+# 
+# Top level modules:
+# 	Addsub
+# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/Multiplexer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Multiplexer
+# 
+# Top level modules:
+# 	Multiplexer
+# 
+vsim work.Processor
+# vsim work.Processor 
+# Loading work.Processor
+# Loading work.upcount
+# Loading work.regn
+# Loading work.Addsub
+# Loading work.Multiplexer
+# Loading work.dec3to8
+do E:/School/AOC2/Pratica02/Processor/simulation/modelsim/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+do E:/School/AOC2/Pratica02/Processor/simulation/modelsim/wave2.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: /Processor/Clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro E:\School\AOC2\Pratica02\Processor\simulation\modelsim\wave2.do line 37
+# ** Error: /Processor/DIN already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro E:\School\AOC2\Pratica02\Processor\simulation\modelsim\wave2.do line 38
+# 1
+# 1
+run
+run
+run
