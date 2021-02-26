@@ -10,84 +10,87 @@
 # ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/upcount.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/upcount.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module upcount
 # 
 # Top level modules:
 # 	upcount
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Shiftlog.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Shiftlog
 # 
 # Top level modules:
 # 	Shiftlog
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Setlessthan.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Setlessthan
 # 
 # Top level modules:
 # 	Setlessthan
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/regn.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/regn.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module regn
 # 
 # Top level modules:
 # 	regn
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Orunit.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Orunit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Orunit
 # 
 # Top level modules:
 # 	Orunit
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Multiplexer.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Multiplexer
 # 
 # Top level modules:
 # 	Multiplexer
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/dec3to8.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/dec3to8.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module dec3to8
 # 
 # Top level modules:
 # 	dec3to8
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/ControlUnit.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ControlUnit
 # 
 # Top level modules:
 # 	ControlUnit
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Addsub.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Addsub.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Addsub
 # 
 # Top level modules:
 # 	Addsub
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Processor.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Processor.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Processor
 # 
 # Top level modules:
 # 	Processor
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Memory.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Memory
-# 
-# Top level modules:
-# 	Memory
-# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor {C:/Users/eduar/Desktop/Git/Processor/Counter.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Counter.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Memory
 # 
-vsim work.Processor
-# vsim work.Processor 
+# Top level modules:
+# 	Memory
+# 
+vsim +altera -L altera_mf_ver -do Processor_run_msim_rtl_verilog.do -l msim_transcript -gui work.Processor
+# vsim +altera -L altera_mf_ver -do Processor_run_msim_rtl_verilog.do -l msim_transcript -gui work.Processor 
 # Loading work.Processor
 # Loading work.Counter
 # Loading work.Memory
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # Loading work.ControlUnit
 # Loading work.upcount
 # Loading work.regn
@@ -97,24 +100,88 @@ vsim work.Processor
 # Loading work.Shiftlog
 # Loading work.Multiplexer
 # Loading work.dec3to8
-wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 8000ps sim:/Processor/PClock
-wave create -driver freeze -pattern clock -initialvalue 0 -period 400ps -dutycycle 25 -starttime 0ps -endtime 8000ps sim:/Processor/MClock
-add wave -position insertpoint  \
-sim:/Processor/address
-add wave -position insertpoint  \
-sim:/Processor/data
-add wave -position insertpoint  \
-sim:/Processor/Control/DIN
-add wave -position insertpoint  \
-sim:/Processor/Control/IR
-add wave -position insertpoint  \
-sim:/Processor/Control/IRin
-add wave -position insertpoint  \
-sim:/Processor/Control/R
-run -all
-wave modify -driver freeze -pattern clock -initialvalue St0 -period 200ps -dutycycle 25 -starttime 0ps -endtime 8000ps Edit:/Processor/MClock
-wave modify -driver freeze -pattern clock -initialvalue St0 -period 400ps -dutycycle 50 -starttime 0ps -endtime 8000ps Edit:/Processor/MClock
-wave modify -driver freeze -pattern clock -initialvalue St0 -period 200ps -dutycycle 25 -starttime 0ps -endtime 8000ps Edit:/Processor/MClock
-wave modify -driver freeze -pattern clock -initialvalue St0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 8000ps Edit:/Processor/PClock
-restart
+# do Processor_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/upcount.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module upcount
+# 
+# Top level modules:
+# 	upcount
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Shiftlog.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Shiftlog
+# 
+# Top level modules:
+# 	Shiftlog
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Setlessthan.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Setlessthan
+# 
+# Top level modules:
+# 	Setlessthan
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/regn.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module regn
+# 
+# Top level modules:
+# 	regn
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Orunit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Orunit
+# 
+# Top level modules:
+# 	Orunit
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Multiplexer.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Multiplexer
+# 
+# Top level modules:
+# 	Multiplexer
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/dec3to8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dec3to8
+# 
+# Top level modules:
+# 	dec3to8
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/ControlUnit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ControlUnit
+# 
+# Top level modules:
+# 	ControlUnit
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Addsub.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Addsub
+# 
+# Top level modules:
+# 	Addsub
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Processor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Processor
+# 
+# Top level modules:
+# 	Processor
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Counter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Memory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# 
+do C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/simulation/modelsim/wave2.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
 run -all

@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at ControlUnit.v(8): object "i" differs only in case from object "I" in the same scope
+Info (10281): Verilog HDL Declaration information at ControlUnit.v(7): object "i" differs only in case from object "I" in the same scope

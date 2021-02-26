@@ -2,35 +2,35 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\eduar\Desktop\Git\Processor\simulation\modelsim
+Z0 dC:\Users\eduar\Desktop\Git\AOC2\Pratica2_2\Processor\simulation\modelsim
 vAddsub
-IneLND8h6LCJXz>]3WFlK]1
+I1c`HUBGDM[gZoZ;gABo:K0
 V:E[BbI]]QLj=SQO6>ioEG3
-Z1 dC:\Users\eduar\Desktop\Git\Processor\simulation\modelsim
+Z1 dC:\Users\eduar\Desktop\Git\AOC2\Pratica2_2\Processor\simulation\modelsim
 w1614314205
-8C:/Users/eduar/Desktop/Git/Processor/Addsub.v
-FC:/Users/eduar/Desktop/Git/Processor/Addsub.v
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Addsub.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Addsub.v
 L0 1
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
-Z4 !s92 -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/Processor -O0
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor -O0
 n@addsub
 !i10b 1
-!s100 fb;Bm;e4ikB2z]CKmYOn53
+!s100 ;oQ;Z4OI7XbGS<6:oOF4;0
 !s85 0
-!s108 1614366833.179000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Addsub.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Addsub.v|
+!s108 1614382217.941000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Addsub.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Addsub.v|
 !s101 -O0
 vControlUnit
-IYXN11QemnLgS_`T[OaW^81
-VdDTDIeZ29<lY4EB6=eH8`0
+ID9Hm8J`OXjXY@Y618K>870
+VfC05P6V19L_NkjG?lH>YX3
 R1
-w1614365754
-8C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v
-FC:/Users/eduar/Desktop/Git/Processor/ControlUnit.v
+w1614382113
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/ControlUnit.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/ControlUnit.v
 L0 1
 R2
 r1
@@ -39,40 +39,40 @@ R3
 R4
 n@control@unit
 !i10b 1
-!s100 FE@Z9NCA^BiI^hHigk]C?0
+!s100 PG=CzRfHljn:boHlbfP`G2
 !s85 0
-!s108 1614366833.113000
-!s107 C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/ControlUnit.v|
+!s108 1614382217.875000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/ControlUnit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/ControlUnit.v|
 !s101 -O0
 vCounter
-!i10b 1
-!s100 HPfk@kd_zYFCo`:QbG6EY3
-ISC2FUz7?KY`NfoJU7bII^2
-Vn60VPQ@R;fW_5ZVLzGVo62
+I:FG=>><L:?Am18?2kdeG20
+VgC7R_33WEXUM@onLP:EHH0
 R1
-w1614366773
-8C:/Users/eduar/Desktop/Git/Processor/Counter.v
-FC:/Users/eduar/Desktop/Git/Processor/Counter.v
+w1614374720
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Counter.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Counter.v
 L0 1
 R2
 r1
-!s85 0
 31
-!s108 1614366833.365000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Counter.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Counter.v|
-!s101 -O0
 R3
 R4
 n@counter
+!i10b 1
+!s100 NMkWDOXOIh98QfkVnll2T0
+!s85 0
+!s108 1614382218.074000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Counter.v|
+!s101 -O0
 vdec3to8
-IVU]98A>2_1@^HOHkAWD_h3
+IFdT7^2JbTP9BOlfGP]8<i2
 V2U@bIaW;LG20I9][;hcGb3
 R1
-Z5 w1614309972
-8C:/Users/eduar/Desktop/Git/Processor/dec3to8.v
-FC:/Users/eduar/Desktop/Git/Processor/dec3to8.v
+w1614309972
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/dec3to8.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/dec3to8.v
 L0 1
 R2
 r1
@@ -80,40 +80,40 @@ r1
 R3
 R4
 !i10b 1
-!s100 ZMKRbH[LkH3@596c=26OK1
+!s100 jIbRi:l`O2V@;E@1Od8Jc3
 !s85 0
-!s108 1614366833.055000
-!s107 C:/Users/eduar/Desktop/Git/Processor/dec3to8.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/dec3to8.v|
+!s108 1614382217.814000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/dec3to8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/dec3to8.v|
 !s101 -O0
 vMemory
-IKc6;_B=JA^Vc8m_]klZ<43
-V:Tz;RBjaZ^j^4:3=D2>lN0
+!i10b 1
+!s100 @nfToEaj5AXSAc^b0I22R0
+IH85bl3X2B;[cXR]dN0b]P2
+VQ?2Yh[<V9Om_Dn4i1=>F=0
 R1
-w1614365369
-8C:/Users/eduar/Desktop/Git/Processor/Memory.v
-FC:/Users/eduar/Desktop/Git/Processor/Memory.v
-L0 1
+w1614374265
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Memory.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Memory.v
+L0 39
 R2
 r1
+!s85 0
 31
+!s108 1614382218.150000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Memory.v|
+!s101 -O0
 R3
 R4
 n@memory
-!i10b 1
-!s100 `mBVbUDOSbW][9gc4`@Gm3
-!s85 0
-!s108 1614366833.306000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Memory.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Memory.v|
-!s101 -O0
 vMultiplexer
-I70d6lfBVRO`^jl3MB>o`n2
+I4GX1V[G^2V15Ii1?0anWT3
 V0?@@1QKNoDCO2X`BkcRS`0
 R1
 w1614317050
-8C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v
-FC:/Users/eduar/Desktop/Git/Processor/Multiplexer.v
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Multiplexer.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Multiplexer.v
 L0 1
 R2
 r1
@@ -122,19 +122,19 @@ R3
 R4
 n@multiplexer
 !i10b 1
-!s100 4OKT3kg`cmkGc<O`hfW]b2
+!s100 nP1;_V1=ZaaPTkSU8n`001
 !s85 0
-!s108 1614366832.991000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Multiplexer.v|
+!s108 1614382217.748000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Multiplexer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Multiplexer.v|
 !s101 -O0
 vOrunit
-IU3QzLOzeLO4>@CCke>c7]0
+I9S^=NcYn[GkoWh^Q[0JRA2
 V7CjR6_ZcU96ZEAojZ;d9;2
 R1
 w1614314953
-8C:/Users/eduar/Desktop/Git/Processor/Orunit.v
-FC:/Users/eduar/Desktop/Git/Processor/Orunit.v
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Orunit.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Orunit.v
 L0 1
 R2
 r1
@@ -143,19 +143,19 @@ R3
 R4
 n@orunit
 !i10b 1
-!s100 0lAbR@EndZ@MAPKT4mOkc3
+!s100 Jk>Sl]U7]ZnEaERTLKAT=2
 !s85 0
-!s108 1614366832.924000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Orunit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Orunit.v|
+!s108 1614382217.681000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Orunit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Orunit.v|
 !s101 -O0
 vProcessor
-IQA?XU:18fWWR1:Ii5gXLO2
+IB439^4UJ;]9C1iHgQ@4Rf1
 VR5aePTGHURF<HOJ:13Ufd1
 R1
-w1614366013
-8C:/Users/eduar/Desktop/Git/Processor/Processor.v
-FC:/Users/eduar/Desktop/Git/Processor/Processor.v
+w1614380709
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Processor.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Processor.v
 L0 1
 R2
 r1
@@ -164,19 +164,19 @@ R3
 R4
 n@processor
 !i10b 1
-!s100 ghmF[N=[h_JT]Ff0@8?_C0
+!s100 8cQ8f?;0=W3A_jfRoNZf91
 !s85 0
-!s108 1614366833.240000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Processor.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Processor.v|
+!s108 1614382218.005000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Processor.v|
 !s101 -O0
 vregn
-ISjd?ZJK1;9:D`BKefdjQ?1
+IDR3=j@C`:i1ZQQX:2iRC33
 VUc6I3VM5DDQ[zOJ4a2HfK0
 R1
 w1614358894
-8C:/Users/eduar/Desktop/Git/Processor/regn.v
-FC:/Users/eduar/Desktop/Git/Processor/regn.v
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/regn.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/regn.v
 L0 1
 R2
 r1
@@ -184,19 +184,19 @@ r1
 R3
 R4
 !i10b 1
-!s100 T8<=Fce?JWznDlh4jnDTO3
+!s100 R]PnIL33Un:oHhQSK54PZ2
 !s85 0
-!s108 1614366832.863000
-!s107 C:/Users/eduar/Desktop/Git/Processor/regn.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/regn.v|
+!s108 1614382217.618000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/regn.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/regn.v|
 !s101 -O0
 vSetlessthan
-I?D62T19C]<BGeFe[P:92Z3
+ILYGOW7_OSfM<`YoTV:H_G1
 VAY^cjPnf?jf12IjR9URHW2
 R1
 w1614317696
-8C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v
-FC:/Users/eduar/Desktop/Git/Processor/Setlessthan.v
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Setlessthan.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Setlessthan.v
 L0 1
 R2
 r1
@@ -205,19 +205,19 @@ R3
 R4
 n@setlessthan
 !i10b 1
-!s100 ^]`98^HFE>Z]K4eeFYhKC2
+!s100 3=?`?odzP1K8aLH793:Fo0
 !s85 0
-!s108 1614366832.795000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Setlessthan.v|
+!s108 1614382217.553000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Setlessthan.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Setlessthan.v|
 !s101 -O0
 vShiftlog
-IIj93zeV8<Sk^1llK^S8AD0
+IBdOJ[Q_KKJz4]o?ij[d6K0
 Vh=L8PJ1joXFbkAIlG]IM90
 R1
 w1614314352
-8C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v
-FC:/Users/eduar/Desktop/Git/Processor/Shiftlog.v
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Shiftlog.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Shiftlog.v
 L0 1
 R2
 r1
@@ -226,19 +226,19 @@ R3
 R4
 n@shiftlog
 !i10b 1
-!s100 2NaTkB^nTVlzm^TCE1hlT0
+!s100 lQG4UYamjk?DhZf?11GcX0
 !s85 0
-!s108 1614366832.731000
-!s107 C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/Shiftlog.v|
+!s108 1614382217.491000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Shiftlog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/Shiftlog.v|
 !s101 -O0
 vupcount
-I;k4?FYXzH^XbF:_WfAGAn0
+IeIG@1`a^e8E0Q6zYLd@HB3
 V6F[W^nTWj`kicHA9eP>;d3
 R1
-R5
-8C:/Users/eduar/Desktop/Git/Processor/upcount.v
-FC:/Users/eduar/Desktop/Git/Processor/upcount.v
+w1614380166
+8C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/upcount.v
+FC:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/upcount.v
 L0 1
 R2
 r1
@@ -246,9 +246,9 @@ r1
 R3
 R4
 !i10b 1
-!s100 kM4GAdjYG^c;6S8FmP8S:2
+!s100 ::>Ud_QnPDcgYlk>dVkfX2
 !s85 0
-!s108 1614366832.673000
-!s107 C:/Users/eduar/Desktop/Git/Processor/upcount.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/Processor|C:/Users/eduar/Desktop/Git/Processor/upcount.v|
+!s108 1614382217.431000
+!s107 C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/upcount.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor|C:/Users/eduar/Desktop/Git/AOC2/Pratica2_2/Processor/upcount.v|
 !s101 -O0
