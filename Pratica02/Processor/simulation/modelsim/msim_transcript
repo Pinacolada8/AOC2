@@ -1,51 +1,69 @@
-# Reading H:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
 # do Processor_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying H:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied H:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/Processor.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/Processor.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Processor
 # 
 # Top level modules:
 # 	Processor
-# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/upcount.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/upcount.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module upcount
 # 
 # Top level modules:
 # 	upcount
-# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/dec3to8.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/dec3to8.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module dec3to8
 # 
 # Top level modules:
 # 	dec3to8
-# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/regn.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/regn.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module regn
 # 
 # Top level modules:
 # 	regn
-# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/Addsub.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/Addsub.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Addsub
 # 
 # Top level modules:
 # 	Addsub
-# vlog -vlog01compat -work work +incdir+E:/School/AOC2/Pratica02/Processor {E:/School/AOC2/Pratica02/Processor/Multiplexer.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/Multiplexer.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Multiplexer
 # 
 # Top level modules:
 # 	Multiplexer
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/Orunit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Orunit
+# 
+# Top level modules:
+# 	Orunit
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/Shiftlog.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Shiftlog
+# 
+# Top level modules:
+# 	Shiftlog
+# vlog -vlog01compat -work work +incdir+C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor {C:/Users/eduar/Desktop/Git/AOC2/Pratica02/Processor/Setlessthan.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Setlessthan
+# 
+# Top level modules:
+# 	Setlessthan
 # 
 vsim work.Processor
 # vsim work.Processor 
@@ -53,24 +71,34 @@ vsim work.Processor
 # Loading work.upcount
 # Loading work.regn
 # Loading work.Addsub
+# Loading work.Orunit
+# Loading work.Setlessthan
+# Loading work.Shiftlog
 # Loading work.Multiplexer
 # Loading work.dec3to8
-do E:/School/AOC2/Pratica02/Processor/simulation/modelsim/wave.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# 1
-# 1
-do E:/School/AOC2/Pratica02/Processor/simulation/modelsim/wave2.do
-# .main_pane.wave.interior.cs.body.pw.wf
-# ** Error: /Processor/Clock already exists in the wave, cannot add twice
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-# Executing ONERROR command at macro E:\School\AOC2\Pratica02\Processor\simulation\modelsim\wave2.do line 37
-# ** Error: /Processor/DIN already exists in the wave, cannot add twice
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-# Executing ONERROR command at macro E:\School\AOC2\Pratica02\Processor\simulation\modelsim\wave2.do line 38
-# 1
-# 1
-run
-run
-run
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 4000ps sim:/Processor/Clock
+wave create -driver freeze -pattern constant -value 001101000 -range 15 0 -starttime 0ps -endtime 4000ps sim:/Processor/DIN
+add wave -position insertpoint  \
+sim:/Processor/R
+wave modify -driver freeze -pattern constant -value 10110110101 -range 15 0 -starttime 100ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 000011101 -range 15 0 -starttime 400ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 010101011 -range 15 0 -starttime 800ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 0000000011101011 -range 15 0 -starttime 1600ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 0000000100101011 -range 15 0 -starttime 2000ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 0000000101101011 -range 15 0 -starttime 2400ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 0000000110101011 -range 15 0 -starttime 2800ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 0000000101011101 -range 15 0 -starttime 2800ps -endtime 4000ps Edit:/Processor/DIN
+run -all
+wave modify -driver freeze -pattern constant -value 0000000101101011 -range 15 0 -starttime 2800ps -endtime 4000ps Edit:/Processor/DIN
+restart
+run -all
+wave modify -driver freeze -pattern constant -value 001010000 -range 15 0 -starttime 3200ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 11 -range 15 0 -starttime 3300ps -endtime 4000ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 110101010 -range 15 0 -starttime 3600ps -endtime 4000ps Edit:/Processor/DIN
+restart
+run -all
+wave modify -driver freeze -pattern constant -value 001010000 -range 15 0 -starttime 3200ps -endtime 3600ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 10 -range 15 0 -starttime 3300ps -endtime 3600ps Edit:/Processor/DIN
+wave modify -driver freeze -pattern constant -value 111011010 -range 15 0 -starttime 3600ps -endtime 4000ps Edit:/Processor/DIN
+restart
+run -all
