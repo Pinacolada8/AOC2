@@ -1,15 +1,15 @@
-module ControlUnit (DIN, Resetn, Clock, Run, Done, Nextmem, BusWires);
+module ControlUnit (DIN, Resetn, Clock, Run, Done, BusWires);
 	input [15:0] DIN;
 	input Resetn, Run, Clock;
-	output reg Nextmem;
 	output reg Done;
 	output [15:0] BusWires;
 	
 	integer i;	
+	reg readImm;
 	
 	wire [1:0] Tstep_Q;
-	wire Clear = Done | &Tstep_Q | Run ; // Clear do contador de passo de tempo
-	upcount Tstrp (Clear, Clock, Tstep_Q);
+	wire Clear = &Tstep_Q; // Clear do contador de passo de tempo
+	upcount Tstrp ((Clear | Resetn), Clock, Tstep_Q);
 	
 	
 	wire [8:0] IR; // Saida do Registrador IR
@@ -83,8 +83,8 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, Nextmem, BusWires);
 	
 	wire [2:0]I = IR[8:6]; //Instruçao a ser executada
 	wire [7:0] Xreg, Yreg;	
-	dec3to8 decX (IR[5:3], 1'b1, Xreg); //O valor retornado por Xreg
-	dec3to8 decY (IR[2:0], 1'b1, Yreg); //Registrador 2	
+	dec3to8 decX (IR[5:3], 1'b1, Xreg); //Rin para acesso ao registrador X
+	dec3to8 decY (IR[2:0], 1'b1, Yreg); //Rin para acesso ao registrador Y
 	
 	initial
 	begin
@@ -92,29 +92,37 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, Nextmem, BusWires);
 		Rin = 8'b0;
 		Control = 13'b0;
 		Done = 1'b0;
-		Nextmem = 1'b0;
 		AddSubControl = 1'b0;
 		ShiftDirection = 1'b0;
-	end
-	
-	always @(Tstep_Q or I or Xreg or Yreg)
-	begin
-		IRin = 1'b0; //Desabilita a escrita no registrador IR
-		Done = 1'b0;
-		Nextmem = 1'b0;
-		Rin = 8'b0;
+		readImm = 1'b0;
 		Ain = 1'b0;
 		Gin = 1'b0;
 		Hin = 1'b0;
 		Iin = 1'b0;
 		Jin = 1'b0;
-		Control = 13'b0;
+	end
+	
+	always @(Tstep_Q or I or Xreg or Yreg)
+	begin
+		Ain = 1'b0;
+		Gin = 1'b0;
+		Hin = 1'b0;
+		Iin = 1'b0;
+		Jin = 1'b0;
+		Rin = 8'b0;
+		Cin = 1'b0;
+		Fin = 1'b0;
+		Bin = 1'b0;
 		AddSubControl = 1'b0;
 		ShiftDirection = 1'b0;
+		Done = 1'b0;
+		Control = 13'b0;
+		IRin = 1'b0; //Desabilita a escrita no registrador IR
+					
 		case (Tstep_Q)
 			2'b00: // store DIN in IR in time step 0
 				begin
-					if(Run == 1'b1)
+					if(readImm == 1'b0)
 						IRin = 1'b1; //Habilita a escrita no registrador IR
 				end
 			2'b01: //define signals in time step 1
@@ -127,10 +135,13 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, Nextmem, BusWires);
 						end
 					3'b001: // (mvi)
 						begin
-							Nextmem = 1'b1;
-							Control = 13'b1000000000000;//DINout
-							Rin = Xreg;	//RXin	
-							Done = 1'b1;
+							if (readImm == 1'b0)
+								readImm = 1'b1;
+							else
+							begin
+								Control = 13'b1000000000000;//DINout
+								Rin = Xreg;	//RXin
+							end
 						end
 					3'b010: // (add)
 						begin
@@ -250,6 +261,9 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, Nextmem, BusWires);
 						end						
 				endcase
 		endcase
+	if (readImm == 1'b1 && Tstep_Q == 2'b00)
+		readImm = 1'b0;
+		
 	end
 
 

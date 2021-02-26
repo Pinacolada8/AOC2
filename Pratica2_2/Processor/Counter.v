@@ -1,15 +1,14 @@
-module Counter(Clock, Nextmem, Resetn, n);
+module Counter(Clock, Resetn, n);
 	input Clock;
-	input Nextmem;
 	input Resetn;
 	output reg [4:0] n;
 	
 	initial
 	begin
-		n = 5'b11111;
+		n = 5'b0;
 	end
 	
-	always@(posedge Clock or posedge Resetn or posedge Nextmem)
+	always@(posedge Clock or posedge Resetn)
 	begin
 		if(Resetn == 1'b1)
 			n <= 5'b0;

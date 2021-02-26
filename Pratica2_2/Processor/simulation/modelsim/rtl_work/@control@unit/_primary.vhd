@@ -7,7 +7,6 @@ entity ControlUnit is
         Clock           : in     vl_logic;
         Run             : in     vl_logic;
         Done            : out    vl_logic;
-        Nextmem         : out    vl_logic;
         BusWires        : out    vl_logic_vector(15 downto 0)
     );
 end ControlUnit;
