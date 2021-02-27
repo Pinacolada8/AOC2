@@ -5,7 +5,7 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, BusWires);
 	output [15:0] BusWires;
 	
 	integer i;	
-	reg readImm;
+	reg [1:0]Stall;
 	
 	wire [1:0] Tstep_Q;
 	wire Clear = &Tstep_Q; // Clear do contador de passo de tempo
@@ -94,7 +94,7 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, BusWires);
 		Done = 1'b0;
 		AddSubControl = 1'b0;
 		ShiftDirection = 1'b0;
-		readImm = 1'b0;
+		Stall = 2'b00;
 		Ain = 1'b0;
 		Gin = 1'b0;
 		Hin = 1'b0;
@@ -118,11 +118,14 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, BusWires);
 		Done = 1'b0;
 		Control = 13'b0;
 		IRin = 1'b0; //Desabilita a escrita no registrador IR
+		
+		if (Stall > 2'b00 && Tstep_Q == 2'b00)
+			Stall = Stall - 2'b01;
 					
 		case (Tstep_Q)
 			2'b00: // store DIN in IR in time step 0
 				begin
-					if(readImm == 1'b0)
+					if(Stall == 2'b00)
 						IRin = 1'b1; //Habilita a escrita no registrador IR
 				end
 			2'b01: //define signals in time step 1
@@ -135,8 +138,8 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, BusWires);
 						end
 					3'b001: // (mvi)
 						begin
-							if (readImm == 1'b0)
-								readImm = 1'b1;
+							if (Stall == 2'b00)
+								Stall = 2'b10;
 							else
 							begin
 								Control = 13'b1000000000000;//DINout
@@ -261,9 +264,6 @@ module ControlUnit (DIN, Resetn, Clock, Run, Done, BusWires);
 						end						
 				endcase
 		endcase
-	if (readImm == 1'b1 && Tstep_Q == 2'b00)
-		readImm = 1'b0;
-		
 	end
 
 

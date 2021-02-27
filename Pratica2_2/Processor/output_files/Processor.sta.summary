@@ -3,18 +3,26 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'PClock'
-Slack : -10.284
-TNS   : -1962.009
+Slack : -10.871
+TNS   : -1996.178
+
+Type  : Slow Model Setup 'ControlUnit:Control|Stall[0]'
+Slack : -1.453
+TNS   : -1.453
 
 Type  : Slow Model Setup 'MClock'
-Slack : -0.591
-TNS   : -1.622
+Slack : -0.681
+TNS   : -1.718
 
-Type  : Slow Model Hold 'MClock'
-Slack : 0.391
-TNS   : 0.000
+Type  : Slow Model Hold 'ControlUnit:Control|Stall[0]'
+Slack : -2.747
+TNS   : -2.747
 
 Type  : Slow Model Hold 'PClock'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Slow Model Hold 'MClock'
 Slack : 0.391
 TNS   : 0.000
 
@@ -26,19 +34,31 @@ Type  : Slow Model Minimum Pulse Width 'MClock'
 Slack : -1.380
 TNS   : -6.380
 
+Type  : Slow Model Minimum Pulse Width 'ControlUnit:Control|Stall[0]'
+Slack : 0.500
+TNS   : 0.000
+
 Type  : Fast Model Setup 'PClock'
-Slack : -4.079
-TNS   : -761.903
+Slack : -4.137
+TNS   : -739.711
+
+Type  : Fast Model Setup 'ControlUnit:Control|Stall[0]'
+Slack : -0.324
+TNS   : -0.324
 
 Type  : Fast Model Setup 'MClock'
-Slack : 0.300
+Slack : 0.242
 TNS   : 0.000
 
-Type  : Fast Model Hold 'MClock'
-Slack : 0.215
-TNS   : 0.000
+Type  : Fast Model Hold 'ControlUnit:Control|Stall[0]'
+Slack : -1.542
+TNS   : -1.542
 
 Type  : Fast Model Hold 'PClock'
+Slack : -0.338
+TNS   : -8.960
+
+Type  : Fast Model Hold 'MClock'
 Slack : 0.215
 TNS   : 0.000
 
@@ -49,5 +69,9 @@ TNS   : -401.380
 Type  : Fast Model Minimum Pulse Width 'MClock'
 Slack : -1.380
 TNS   : -6.380
+
+Type  : Fast Model Minimum Pulse Width 'ControlUnit:Control|Stall[0]'
+Slack : 0.500
+TNS   : 0.000
 
 ------------------------------------------------------------
